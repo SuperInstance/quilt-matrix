@@ -32,3 +32,6 @@
 {"idx":31,"payload":{"distinct":0.44,"essential":0.1,"parent":"thread","sub":"Echoes resonate in entropy's value"},"reason":"decomp-rejected","round":65,"ts":"2026-10-04T03:36:27Z"}
 {"idx":32,"payload":{"a":"spark","b":"dawn-chorus","fits":0.34},"reason":"moth-drift-rejected","round":68,"ts":"2026-10-04T03:36:41Z"}
 {"idx":33,"payload":{"distinct":0.57,"essential":0.44,"parent":"spark","sub":"Innovation Catalyst"},"reason":"decomp-rejected","round":71,"ts":"2026-10-04T03:36:44Z"}
+{"idx":34,"payload":{"qid":"GUARD:00572","why":"guard target missing"},"reason":"gate-refused","round":76,"ts":"2026-10-04T03:37:01Z"}
+{"idx":35,"payload":{"distinct":0.18,"essential":0.04,"parent":"velvet","sub":"Velvet's texture relates to neurons' ele"},"reason":"decomp-rejected","round":77,"ts":"2026-10-04T03:37:03Z"}
+{"idx":36,"payload":{"a":"dawn-chorus","b":"spark","fits":0.2},"reason":"moth-drift-rejected","round":80,"ts":"2026-10-04T03:37:17Z"}

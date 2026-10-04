@@ -43,7 +43,7 @@ from engine.matrix import Matrix, clamp01                        # noqa: E402
 from engine.music import (MidiWriter, duet_note, jev_melody,     # noqa: E402
                           round_chord, scar_hit)
 from engine.receipts import Ledger, ScarLog, rewind, snapshot    # noqa: E402
-from questions.build_pool import build_pool, load_index, spec_sha  # noqa: E402
+from questions.build_pool import build_pool, load_index, spec_sha, _fill  # noqa: E402
 
 SEED_LEXICON = None  # replaced at bootstrap by the FULL index lexicon (48 words):
 # the matrix must know every word the question pool can ask about, otherwise
@@ -602,7 +602,8 @@ def main() -> int:
             else:
                 # oracle-only family: one batched call
                 try:
-                    r = typesafe_q.ask(row["state"], row["questions"])
+                    r = typesafe_q.ask(refresh_guard_state(matrix, fams_by_id, row)["state"],
+                                       row["questions"])
                     answers = r["answers"]
                     ledger.append("oracle", round_no, {"qid": row["qid"], "family": fam_id,
                                   "latency_ms": r["latency_ms"], "usage": r["usage"]}, mhash)
@@ -670,6 +671,38 @@ def main() -> int:
         slot[2].close()
     print(f"RUN DONE: ledger={len(ledger.lines)} chain_ok={ledger.verify()[0]} scars={scars.count()}")
     return 0
+
+
+def _degree(matrix: Matrix, label: str) -> int:
+    nid = _nid(matrix, label)
+    if not nid:
+        return 0
+    return sum(1 for e in matrix.edges.values()
+               if e.get("src") == nid or e.get("dst") == nid)
+
+
+def refresh_guard_state(matrix: Matrix, fams_by_id: dict, row: dict) -> dict:
+    """GUARD asks whether a node is load-bearing enough to require provenance
+    — so the question must be asked about the node's REAL current weights,
+    not the boot-time defaults (joy=0.5, degree=0) the pool baked in. Night 3
+    diagnosis: with baked state the oracle honestly answered needs_guard≈0.3
+    for everything, and no guard could ever mint. The SPEC (questions,
+    criteria, spec_sha seal) is untouched — only the world the question is
+    asked about is refreshed. The pre-registered spec is about what is asked,
+    not about freezing the web in time."""
+    if row.get("family") != "GUARD":
+        return row
+    node = (row.get("slots") or {}).get("a")
+    n = matrix.nodes.get(_nid(matrix, node) or "")
+    if not node or not n:
+        return row
+    tpl = fams_by_id["GUARD"]["state"]
+    row["state"] = _fill(tpl, a=node,
+                         joy=round(clamp01(float(n.get("joy", 0.5))), 3),
+                         entropy=round(clamp01(float(n.get("entropy", 0.5))), 3),
+                         value=round(clamp01(float(n.get("value", 0.5))), 3),
+                         degree=_degree(matrix, node))
+    return row
 
 
 def _guards(aux) -> set[str]:
