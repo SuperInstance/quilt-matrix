@@ -1,0 +1,195 @@
+{
+  "version": "1.0.0",
+  "model": "jev-latest",
+  "preamble": "The vast question index. Each family is a catalog of typed typesafe.ai System One questions whose ANSWERS ARE the relational weights of the external mind. The oracle answers; the mechanical bot transcribes into nodes.csv/edges.csv. Specs are PRE-REGISTERED here (spec_sha over canon(spec)) before any round runs - the Wave-69 anti-post-hoc discipline. Expansion: families are instantiated over the lexicon and over the matrix's own labels, so the quilt grows questions from its own nodes.",
+  "lexicon": [
+    "joy", "entropy", "value", "moth", "quilt", "scar", "die", "cell", "bridge",
+    "surface", "receipt", "rewind", "song", "drum", "echo", "gate", "wire",
+    "bloom", "drift", "t-minus", "dawn", "ledger", "witness", "field", "lattice",
+    "cadence", "tension", "resonance", "jam", "plainsong", "slackwater", "oracle",
+    "bouncer", "walker", "garden", "tide", "wave", "dawn-chorus", "dusk",
+    "thread", "knot", "loop", "arrow", "mirror", "shadow", "spark", "ember",
+    "velvet", "static"
+  ],
+  "families": [
+    {
+      "id": "REL-BOND",
+      "kind": "edge",
+      "needs_generator": false,
+      "description": "Pairwise relational bond between two concepts. The root family: one batched typesafe call yields a fully weighted edge (joy from resonance probability, entropy from contradiction probability, value from a rubric).",
+      "state": "Concept A: '{a}'. Concept B: '{b}'. Context: a growing web of ideas where relations carry joy/entropy/value weights.",
+      "questions": {
+        "resonates":   { "type": "noul", "instructions": "Do '{a}' and '{b}' genuinely resonate - does thinking about one meaningfully light up the other?" },
+        "contradicts": { "type": "noul", "instructions": "Do '{a}' and '{b}' contradict each other - are they hard to hold as fully true in the same web?" },
+        "strength":    { "type": "score", "instructions": "How strong is the relation between '{a}' and '{b}'?", "criteria": ["unrelated", "tangential", "connected", "strongly linked", "inseparable"] }
+      },
+      "bind": "rel_type = contradicts>0.6 ? contradicts : (resonates>0.5 ? resonates : echoes); joy=resonates; entropy=contradicts; value=strength_norm",
+      "spec": {
+        "endpoints_must_exist": true,
+        "allow_self_loop": false,
+        "weights_range": [0, 1],
+        "merge_semantics": "0.5*old+0.5*new",
+        "rel_types_allowed": ["resonates", "contradicts", "echoes"]
+      }
+    },
+    {
+      "id": "DECOMP",
+      "kind": "node",
+      "needs_generator": true,
+      "description": "Node fission. A small cell proposes 2-4 sub-ideas of a parent; the oracle weighs each sub on two gates (essential? distinct?). Passing subs become nodes with feeds-edges from the parent. This is how the web self-decomposes.",
+      "state": "Parent concept: '{a}'. Its current paper (relations): {paper}. Proposed sub-idea: '{b}'.",
+      "questions": {
+        "essential": { "type": "noul", "instructions": "Is '{b}' an essential part or aspect of '{a}'?" },
+        "distinct":  { "type": "noul", "instructions": "Is '{b}' meaningfully distinct enough from '{a}' to deserve its own node?" }
+      },
+      "bind": "if essential>0.5 and distinct>0.5: add node b (joy=0.4+0.4*essential, entropy=0.5, value=essential) + edge a->b rel=feeds",
+      "spec": {
+        "parent_must_exist": true,
+        "subs_range": [1, 4],
+        "gates": { "essential": [0.5, 1.0], "distinct": [0.5, 1.0] },
+        "max_new_nodes_per_round": 3
+      }
+    },
+    {
+      "id": "BRIDGE",
+      "kind": "edge_node",
+      "needs_generator": true,
+      "description": "Distant-cluster bridging. A cell proposes a connector concept C between distant A and B; the oracle judges whether C genuinely bridges and how strong the bridge is. Long-range structure is how a web stops being a hairball.",
+      "state": "Concept A: '{a}'. Distant concept B: '{b}'. Proposed bridge concept C: '{c}'.",
+      "questions": {
+        "bridges": { "type": "noul", "instructions": "Does '{c}' genuinely bridge '{a}' and '{b}' - is it a real middle term, not a pun?" },
+        "weight":  { "type": "score", "instructions": "How load-bearing is the bridge '{c}' between '{a}' and '{b}'?", "criteria": ["cosmetic", "weak", "useful", "load-bearing", "foundational"] }
+      },
+      "bind": "if bridges>0.5: ensure node c; edges a->c and c->b rel=bridges with value=weight_norm, joy=bridges",
+      "spec": {
+        "endpoints_must_exist": ["a", "b"],
+        "bridge_may_be_new": true,
+        "gates": { "bridges": [0.5, 1.0] },
+        "weights_range": [0, 1]
+      }
+    },
+    {
+      "id": "TENSION",
+      "kind": "audit",
+      "needs_generator": false,
+      "description": "Self-audit of an existing edge. The oracle is asked whether a recorded relation is suspicious; a high suspicion scars the edge (sticky) and raises its entropy; a low suspicion confirms it (tiny value boost). The web that audits itself grows honest.",
+      "state": "Recorded relation: '{a}' --[{rel}]--> '{b}' (joy={joy}, entropy={entropy}, value={value}).",
+      "questions": {
+        "suspicious": { "type": "noul", "instructions": "Is this recorded relation suspicious - likely wrong, inflated, or a misreading of the pair?" },
+        "repairable": { "type": "score", "instructions": "If suspicious, how repairable is this relation by re-weighting alone?", "criteria": ["hopeless", "hard", "possible", "easy", "trivial"] }
+      },
+      "bind": "if suspicious>0.7: scar(reason=tension-audit, edge) + edge.entropy+=0.1; else edge.value+=0.02 (confirmed)",
+      "spec": {
+        "edge_must_exist": true,
+        "scar_reason": "tension-audit",
+        "entropy_bump": 0.1,
+        "confirm_bump": 0.02
+      }
+    },
+    {
+      "id": "TMSEQ",
+      "kind": "edge",
+      "needs_generator": true,
+      "description": "T-minus decomposition. A cell breaks a goal into an ordered countdown of stages; the oracle judges each adjacent pair with 'must X come before Y?'. Ordered dependency chains with weights - the t-minus paradigm as spreadsheet rows.",
+      "state": "Goal: '{a}'. Stage X: '{b}'. Stage Y: '{c}'. Goal context: building '{a}' as a countdown sequence of stages.",
+      "questions": {
+        "before": { "type": "noul", "instructions": "Must stage '{b}' be completed before stage '{c}' on the way to '{a}'?" }
+      },
+      "bind": "if before>0.5: edge b->c rel=tminus value=0.8-pos*0.1 joy=before entropy=1-before",
+      "spec": {
+        "goal_must_exist": true,
+        "stages_range": [2, 6],
+        "chain_only": true,
+        "rel_type": "tminus"
+      }
+    },
+    {
+      "id": "SOUND",
+      "kind": "params",
+      "needs_generator": false,
+      "description": "Sound parameters from a concept cluster. The oracle chooses a mode and scores brightness/density/velocity for the cluster; the mechanical bot writes sound.csv, and the music engine reads it. Music as a first-class output channel of the weights.",
+      "state": "Concept cluster: {cluster}. Their current weights: {weights}.",
+      "questions": {
+        "mode":      { "type": "choice", "instructions": "Which musical mode best fits this cluster's character?", "criteria": { "major": "bright, resolved", "minor": "dark, serious", "dorian": "wandering, ancient", "phrygian": "tense, exotic", "lydian": "dreamlike, floating", "mixolydian": "rolling, bluesy", "pentatonic": "open, folk-simple" } },
+        "brightness":{ "type": "score", "instructions": "How bright is this cluster's character?", "criteria": ["pitch-dark", "dark", "neutral", "bright", "dazzling"] },
+        "density":   { "type": "score", "instructions": "How dense/tangled are the ideas here?", "criteria": ["sparse", "light", "medium", "dense", "knotted"] },
+        "velocity":  { "type": "score", "instructions": "How much energy should this cluster be played with?", "criteria": ["still", "calm", "moving", "driving", "furious"] }
+      },
+      "bind": "write sound.csv row {cluster, mode, brightness, density, velocity, round}; if brightness>0.6 also edge a->b rel=sounds",
+      "spec": {
+        "cluster_from_existing_nodes": true,
+        "cluster_size": [2, 4],
+        "modes_allowed": ["major", "minor", "dorian", "phrygian", "lydian", "mixolydian", "pentatonic"],
+        "file": "sound.csv"
+      }
+    },
+    {
+      "id": "MOTHDRIFT",
+      "kind": "edge",
+      "needs_generator": false,
+      "description": "Moth-drifted neighbor probe. TRUE quantum bits (moth coin-toss-v1) pick an unexpected candidate neighbor for a concept; the oracle judges whether the drift is interesting. Quantum randomness as a creative act, receipted.",
+      "state": "Concept A: '{a}'. Moth-drifted candidate neighbor: '{b}'. The candidate was chosen by a quantum coin (provenance {prov}).",
+      "questions": {
+        "fits": { "type": "noul", "instructions": "Is '{b}' a genuinely interesting neighbor for '{a}' - surprising but worth a tentative link?" }
+      },
+      "bind": "if fits>0.4: edge a->b rel=echoes joy=fits entropy=0.6+0.3*moth01 value=0.3 note=moth-drift",
+      "spec": {
+        "candidate_source": "moth coin-toss-v1 bits over lexicon",
+        "entropy_range": [0.6, 0.9],
+        "gates": { "fits": [0.4, 1.0] },
+        "fallback": "deterministic hash pick, receipted sha: seed"
+      }
+    },
+    {
+      "id": "GUARD",
+      "kind": "flag",
+      "needs_generator": false,
+      "description": "Self-defending architecture. The oracle decides whether a node is load-bearing enough to deserve a guard spec; guarded nodes then REQUIRE provenance (question_id) on any future edge touching them - the mechanical gate refuses un-specced writes. Wave-69's spec gate, miniaturized.",
+      "state": "Node: '{a}' (joy={joy}, entropy={entropy}, value={value}, degree={degree}).",
+      "questions": {
+        "needs_guard":    { "type": "noul", "instructions": "Is '{a}' load-bearing enough in this web that edits touching it should require provenance?" },
+        "guard_strength": { "type": "score", "instructions": "How strict should the guard on '{a}' be?", "criteria": ["open", "light", "standard", "strict", "airtight"] }
+      },
+      "bind": "if needs_guard>0.5: guards.csv row {node, strength, round}; gate: new edges touching node without question_id -> scar(spec-missing)",
+      "spec": {
+        "node_must_exist": true,
+        "file": "guards.csv",
+        "gate_rule": "edge.touching(guarded).question_id=='' -> INDETERMINATE + scar"
+      }
+    },
+    {
+      "id": "ECHO",
+      "kind": "audit",
+      "needs_generator": false,
+      "description": "Oracle self-consistency probe. The SAME relation question is asked twice with different phrasings; the delta between the two answers is the echo_delta. Large delta scars the pair as oracle-unstable; small delta confirms with a value boost. The unspoken-resonance lineage, instrumented.",
+      "state": "Pair: '{a}' and '{b}'.",
+      "questions": {
+        "p1": { "type": "noul", "instructions": "Do '{a}' and '{b}' belong close together in the same web?" },
+        "p2": { "type": "noul", "instructions": "If you met '{a}' and '{b}' in a new unfinished idea-map, would you draw a line between them?" }
+      },
+      "bind": "delta=|p1-p2|; if delta>0.35: scar(oracle-instability, pair); else edge a->b rel=resonates value=0.5+0.3*(1-delta)",
+      "spec": {
+        "pair_must_exist_as_nodes": true,
+        "delta_threshold": 0.35,
+        "scar_reason": "oracle-instability"
+      }
+    },
+    {
+      "id": "PLAY",
+      "kind": "game",
+      "needs_generator": false,
+      "description": "Play. The oracle chooses which micro-game two cells play over a pair this round, then judges whether the played pattern was joyful. Games are logged; joyful plays become plays-edges. Play is a first-class epistemic act, not a reward.",
+      "state": "Cell X holds '{a}'. Cell Y holds '{b}'.",
+      "questions": {
+        "game": { "type": "choice", "instructions": "Which game should the cells play over this pair?", "criteria": { "pass-the-note": "one holds a tone, the other answers it", "weight-auction": "they bid joy/entropy/value for the edge", "scar-tag": "they try to tag each other's weakest weight", "drone-drone": "they hold sustained tones and listen for beats" } },
+        "fun":  { "type": "noul", "instructions": "Was the pattern the cells produced joyful?" }
+      },
+      "bind": "games.csv row {a, b, game, round}; if fun>0.5: edge a->b rel=plays joy=fun value=0.4",
+      "spec": {
+        "participants_must_exist": true,
+        "games_allowed": ["pass-the-note", "weight-auction", "scar-tag", "drone-drone"],
+        "file": "games.csv"
+      }
+    }
+  ]
+}
