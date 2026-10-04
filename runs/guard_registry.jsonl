@@ -1,1 +1,2 @@
 {"hash":"baf12bd98ef16409b8e16b1b36150673111c5288af2b081dcca234d5cd1a4ee0","node":"ledger","prev_hash":"0000000000000000000000000000000000000000000000000000000000000000","reason":"guard-question:GUARD:00595","round":89,"run":"night3","strength":0.52,"ts":"2026-10-04T03:38:43Z"}
+{"hash":"26f0cafe8e9c8784f65830be361ff592c204e2b24139cbe2b4cab867f5478a68","node":"lattice","prev_hash":"baf12bd98ef16409b8e16b1b36150673111c5288af2b081dcca234d5cd1a4ee0","reason":"guard-question:GUARD:00608","round":132,"run":"night3","strength":0.482,"ts":"2026-10-04T03:42:13Z"}
