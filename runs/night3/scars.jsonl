@@ -19,3 +19,6 @@
 {"idx":18,"payload":{"distinct":0.45,"essential":0.2,"parent":"slackwater","sub":"Lakes Formed"},"reason":"decomp-rejected","round":36,"ts":"2026-10-04T03:31:57Z"}
 {"idx":19,"payload":{"edge":"blank-space->bridge-to-song:tminus","repairable":0.5225,"suspicious":0.77},"reason":"tension-audit","round":37,"ts":"2026-10-04T03:31:57Z"}
 {"idx":20,"payload":{"family":"TMSEQ","qid":"TMSEQ:00431"},"reason":"cell-indeterminate","round":40,"ts":"2026-10-04T03:32:14Z"}
+{"idx":21,"payload":{"family":"DECOMP","qid":"DECOMP:00293"},"reason":"cell-indeterminate","round":42,"ts":"2026-10-04T03:32:19Z"}
+{"idx":22,"payload":{"a":"jam","b":"cell","bridges":0.33,"c":"Molecular Link"},"reason":"bridge-rejected","round":47,"ts":"2026-10-04T03:32:36Z"}
+{"idx":23,"payload":{"distinct":0.45,"essential":0.5,"parent":"lattice","sub":"Lattice of Connections"},"reason":"decomp-rejected","round":48,"ts":"2026-10-04T03:32:38Z"}

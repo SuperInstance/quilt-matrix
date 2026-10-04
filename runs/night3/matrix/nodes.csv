@@ -21,6 +21,7 @@ entropy,entropy,0.52,0.46,0.5,0,seed,lexicon seed row
 field,field,0.56,0.47000000000000003,0.5,0,seed,lexicon seed row
 garden,garden,0.58,0.51,0.5,0,seed,lexicon seed row
 gate,gate,0.5,0.46,0.5,0,seed,lexicon seed row
+germination,Germination,0.5,0.5,0.5,46,cell+oracle,tminus stage of bloom
 inferno,inferno,0.5,0.5,0.5,34,cell+oracle,tminus stage of field
 jam,jam,0.56,0.45,0.5,0,seed,lexicon seed row
 joy,joy,0.5,0.45,0.5,0,seed,lexicon seed row
@@ -37,7 +38,9 @@ receipt,receipt,0.5,0.48,0.5,0,seed,lexicon seed row
 receipt-loops-back-to-accounting,Receipt loops back to accounting,0.65,0.5,0.47,29,cell+oracle,bridge receipt<->loop
 resonance,resonance,0.54,0.51,0.5,0,seed,lexicon seed row
 rewind,rewind,0.52,0.49,0.5,0,seed,lexicon seed row
+rhythmic-growth,Rhythmic growth,0.66,0.5,0.5225,41,cell+oracle,bridge cadence<->bloom
 scar,scar,0.5,0.5,0.5,0,seed,lexicon seed row
+seedling,Seedling,0.5,0.5,0.5,46,cell+oracle,tminus stage of bloom
 shadow,shadow,0.58,0.47000000000000003,0.5,0,seed,lexicon seed row
 slackwater,slackwater,0.5,0.47000000000000003,0.5,0,seed,lexicon seed row
 song,song,0.54,0.5,0.5,0,seed,lexicon seed row
