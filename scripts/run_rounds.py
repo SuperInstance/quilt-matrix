@@ -274,11 +274,8 @@ def apply_family(fam_id: str, row: dict, answers: dict, matrix: Matrix,
                               reason=f"guard-question:{row['qid']}")
             if guards_all is not None:
                 guards_all.add(na)  # guarded for every future run, now
-            ledger.append("guard-mint", round_no,
-                          {"node": na, "strength": round(gs, 3),
-                           "registry_size": registry.count() if registry else None},
-                          matrix.matrix_hash())
-            out.update({"guarded": na, "strength": round(gs, 3)})
+            out.update({"guarded": na, "strength": round(gs, 3),
+                        "registry_size": registry.count() if registry else None})
         else:
             out.update({"guarded": None, "needs_guard": ng})
 

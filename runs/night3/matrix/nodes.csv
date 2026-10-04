@@ -8,6 +8,7 @@ bridge,bridge,0.56,0.46,0.5,0,seed,lexicon seed row
 bridge-to-song,Bridge to Song,0.5,0.5,0.5,5,cell+oracle,tminus stage of song
 cadence,cadence,0.5,0.49,0.5,0,seed,lexicon seed row
 cell,cell,0.54,0.45,0.5,0,seed,lexicon seed row
+darkness-as-absence-of-light,Darkness as absence of light,0.7240000000000001,0.5,0.81,89,cell+oracle,decomp of shadow
 dawn,dawn,0.5,0.51,0.5,0,seed,lexicon seed row
 dawn-chorus,dawn-chorus,0.54,0.47000000000000003,0.5,0,seed,lexicon seed row
 die,die,0.52,0.51,0.5,0,seed,lexicon seed row
@@ -44,6 +45,7 @@ rhythmic-patterns,Rhythmic Patterns,0.728,0.5,0.82,54,cell+oracle,decomp of drum
 scar,scar,0.5,0.5,0.5,0,seed,lexicon seed row
 seedling,Seedling,0.5,0.5,0.5,46,cell+oracle,tminus stage of bloom
 shadow,shadow,0.58,0.47000000000000003,0.5,0,seed,lexicon seed row
+silhouette,Silhouette,0.6080000000000001,0.5,0.52,86,cell+oracle,decomp of shadow
 slackwater,slackwater,0.5,0.47000000000000003,0.5,0,seed,lexicon seed row
 song,song,0.54,0.5,0.5,0,seed,lexicon seed row
 spark,spark,0.5,0.48,0.5,0,seed,lexicon seed row
