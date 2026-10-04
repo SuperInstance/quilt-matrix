@@ -18,6 +18,7 @@ drum,drum,0.56,0.51,0.5,0,seed,lexicon seed row
 dusk,dusk,0.56,0.48,0.5,0,seed,lexicon seed row
 echo,echo,0.58,0.45,0.5,0,seed,lexicon seed row
 echoes-apparition,echoes(apparition),0.5,0.5,0.5,34,cell+oracle,tminus stage of mirror
+echoes-of-lost-moments-rewind,Echoes of lost moments rewind,0.52,0.5,0.545,66,cell+oracle,bridge mirror<->rewind
 ember,ember,0.52,0.49,0.5,0,seed,lexicon seed row
 entropy,entropy,0.52,0.46,0.5,0,seed,lexicon seed row
 eyewitness-account,Eyewitness account,0.7040000000000001,0.5,0.76,15,cell+oracle,decomp of witness
@@ -51,6 +52,9 @@ quilt,quilt,0.58,0.49,0.5,0,seed,lexicon seed row
 random-pattern,Random Pattern,0.5,0.5,0.5,14,cell+oracle,tminus stage of value
 receipt,receipt,0.5,0.48,0.5,0,seed,lexicon seed row
 resonance,resonance,0.54,0.51,0.5,0,seed,lexicon seed row
+resonant-frequency,Resonant frequency,0.776,0.5,0.94,72,cell+oracle,decomp of resonance
+resonates-accelerator,resonates(accelerator),0.5,0.5,0.5,65,cell+oracle,tminus stage of value
+resonates-architect,resonates(architect),0.5,0.5,0.5,65,cell+oracle,tminus stage of value
 resonates-witness,resonates(witness),0.5,0.5,0.5,34,cell+oracle,tminus stage of mirror
 rewind,rewind,0.52,0.49,0.5,0,seed,lexicon seed row
 rewinding-tension,Rewinding tension,0.52,0.5,0.475,51,cell+oracle,bridge rewind<->tension
@@ -75,6 +79,8 @@ t-minus-2-flux,T-minus 2: Flux,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of d
 t-minus-tension,t-minus(tension),0.5,0.5,0.5,60,cell+oracle,tminus stage of garden
 tension,tension,0.52,0.5,0.5,0,seed,lexicon seed row
 tension-wave,tension wave,0.5,0.5,0.5,39,cell+oracle,tminus stage of drum
+testimonial-value,testimonial value,0.696,0.5,0.74,62,cell+oracle,decomp of witness
+testimony,testimony,0.5,0.5,0.5,70,cell+oracle,tminus stage of witness
 thread,thread,0.58,0.49,0.5,0,seed,lexicon seed row
 tide,tide,0.5,0.45,0.5,0,seed,lexicon seed row
 value,value,0.54,0.47000000000000003,0.5,0,seed,lexicon seed row

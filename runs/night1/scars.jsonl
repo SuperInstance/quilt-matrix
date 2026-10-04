@@ -26,3 +26,8 @@
 {"idx":25,"payload":{"family":"TMSEQ","qid":"TMSEQ:00494"},"reason":"cell-indeterminate","round":55,"ts":"2026-10-04T02:23:18Z"}
 {"idx":26,"payload":{"distinct":0.32,"essential":0.04,"parent":"receipt","sub":"Receipt is a subliminal warning"},"reason":"decomp-rejected","round":57,"ts":"2026-10-04T02:23:21Z"}
 {"idx":27,"payload":{"qid":"PLAY:00738","why":"endpoint not in matrix: Static Electricity Attracts Dust/slackwater"},"reason":"gate-refused","round":58,"ts":"2026-10-04T02:23:22Z"}
+{"idx":28,"payload":{"a":"dawn-chorus","b":"Quantum Fluctuation","bridges":0.18,"c":"Quantum Harmony"},"reason":"bridge-rejected","round":61,"ts":"2026-10-04T02:23:27Z"}
+{"idx":29,"payload":{"qid":"PLAY:00737","why":"endpoint not in matrix: Sketch/ember"},"reason":"gate-refused","round":63,"ts":"2026-10-04T02:23:30Z"}
+{"idx":30,"payload":{"distinct":0.64,"essential":0.28,"parent":"gate","sub":"Gate Control Hierarchy"},"reason":"decomp-rejected","round":67,"ts":"2026-10-04T02:23:36Z"}
+{"idx":31,"payload":{"a":"Static Electricity Attracts Dust","b":"loop","fits":0.29},"reason":"moth-drift-rejected","round":69,"ts":"2026-10-04T02:23:36Z"}
+{"idx":32,"payload":{"a":"dawn-chorus","b":"Quantum Fluctuation","bridges":0.24,"c":"Echoes of Dawn in Quantum Foam"},"reason":"bridge-rejected","round":71,"ts":"2026-10-04T02:23:40Z"}

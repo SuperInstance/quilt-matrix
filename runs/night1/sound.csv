@@ -11,3 +11,5 @@ cluster,mode,brightness,density,velocity,round
 "[""drum"", ""velvet""]",minor,0.28,0.087,0.42,50
 "[""dusk"", ""knot""]",minor,0.24,0.515,0.228,54
 "[""ember"", ""tension""]",phrygian,0.378,0.198,0.685,59
+"[""cadence"", ""drift""]",lydian,0.468,0.12,0.34,64
+"[""t-2"", ""joy""]",major,0.637,0.065,0.28,69
