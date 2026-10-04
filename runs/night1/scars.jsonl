@@ -4,3 +4,7 @@
 {"idx":3,"payload":{"a":"lattice","b":"rewind","fits":0.4},"reason":"moth-drift-rejected","round":8,"ts":"2026-10-04T02:06:52Z"}
 {"idx":4,"payload":{"family":"TMSEQ","qid":"TMSEQ:00407"},"reason":"cell-indeterminate","round":9,"ts":"2026-10-04T02:06:56Z"}
 {"idx":5,"payload":{"a":"cell","b":"jam","bridges":0.26,"c":"Cell division creates traffic jam"},"reason":"bridge-rejected","round":14,"ts":"2026-10-04T02:07:31Z"}
+{"idx":6,"payload":{"a":"plainsong","b":"wire","bridges":0.43,"c":"Plainsong Melodies Converge on Wire Harp"},"reason":"bridge-rejected","round":19,"ts":"2026-10-04T02:07:40Z"}
+{"idx":7,"payload":{"family":"DECOMP","qid":"DECOMP:00286"},"reason":"cell-indeterminate","round":20,"ts":"2026-10-04T02:07:42Z"}
+{"idx":8,"payload":{"a":"ledger","b":"die","fits":0.37},"reason":"moth-drift-rejected","round":22,"ts":"2026-10-04T02:07:42Z"}
+{"idx":9,"payload":{"a":"cell","b":"jam","bridges":0.21,"c":"cellular division jams"},"reason":"bridge-rejected","round":24,"ts":"2026-10-04T02:07:46Z"}

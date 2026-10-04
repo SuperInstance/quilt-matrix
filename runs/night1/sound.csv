@@ -1,3 +1,5 @@
 cluster,mode,brightness,density,velocity,round
 "[""dusk"", ""plainsong""]",dorian,0.233,0.133,0.142,8
 "[""spark"", ""wire""]",major,0.735,0.107,0.565,13
+"[""dawn-chorus"", ""song""]",major,0.785,0.147,0.328,18
+"[""oracle"", ""die""]",minor,0.2,0.165,0.265,23
