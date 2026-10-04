@@ -21,6 +21,7 @@ entropy,entropy,0.52,0.46,0.5,0,seed,lexicon seed row
 field,field,0.56,0.47000000000000003,0.5,0,seed,lexicon seed row
 garden,garden,0.58,0.51,0.5,0,seed,lexicon seed row
 gate,gate,0.5,0.46,0.5,0,seed,lexicon seed row
+inferno,inferno,0.5,0.5,0.5,34,cell+oracle,tminus stage of field
 jam,jam,0.56,0.45,0.5,0,seed,lexicon seed row
 joy,joy,0.5,0.45,0.5,0,seed,lexicon seed row
 knot,knot,0.5,0.5,0.5,0,seed,lexicon seed row

@@ -4,3 +4,5 @@ cluster,mode,brightness,density,velocity,round
 "[""field"", ""dawn""]",lydian,0.723,0.06,0.27,17
 "[""entropy"", ""tide""]",lydian,0.347,0.138,0.395,21
 "[""jam"", ""walker""]",pentatonic,0.58,0.06,0.27,27
+"[""dawn-chorus"", ""spark""]",lydian,0.833,0.12,0.458,33
+"[""thread"", ""dawn""]",lydian,0.71,0.092,0.275,39

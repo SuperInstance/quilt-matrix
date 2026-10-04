@@ -15,3 +15,7 @@
 {"idx":14,"payload":{"distinct":0.26,"essential":0.09,"parent":"plainsong","sub":"Plainsong relates to ancient numerology"},"reason":"decomp-rejected","round":30,"ts":"2026-10-04T03:31:36Z"}
 {"idx":15,"payload":{"qid":"PLAY:00668","why":"endpoint not in matrix: Birds' morning songs are like dawn's ech/walker"},"reason":"gate-refused","round":31,"ts":"2026-10-04T03:31:36Z"}
 {"idx":16,"payload":{"a":"thread","b":"tension","fits":0.4},"reason":"moth-drift-rejected","round":32,"ts":"2026-10-04T03:31:51Z"}
+{"idx":17,"payload":{"qid":"BRIDGE:00356","why":"bridge endpoints missing"},"reason":"gate-refused","round":35,"ts":"2026-10-04T03:31:55Z"}
+{"idx":18,"payload":{"distinct":0.45,"essential":0.2,"parent":"slackwater","sub":"Lakes Formed"},"reason":"decomp-rejected","round":36,"ts":"2026-10-04T03:31:57Z"}
+{"idx":19,"payload":{"edge":"blank-space->bridge-to-song:tminus","repairable":0.5225,"suspicious":0.77},"reason":"tension-audit","round":37,"ts":"2026-10-04T03:31:57Z"}
+{"idx":20,"payload":{"family":"TMSEQ","qid":"TMSEQ:00431"},"reason":"cell-indeterminate","round":40,"ts":"2026-10-04T03:32:14Z"}
