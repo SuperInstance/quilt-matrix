@@ -63,3 +63,6 @@
 {"idx":62,"payload":{"qid":"ECHO:00710","why":"endpoint not in matrix: resonates(architect)/thread"},"reason":"gate-refused","round":103,"ts":"2026-10-04T02:32:00Z"}
 {"idx":63,"payload":{"qid":"TENSION:00382","why":"endpoint not in matrix: Rewinding tension/jam"},"reason":"gate-refused","round":104,"ts":"2026-10-04T02:32:00Z"}
 {"idx":64,"payload":{"a":"testimonial value","b":"joy","fits":0.25},"reason":"moth-drift-rejected","round":105,"ts":"2026-10-04T02:32:12Z"}
+{"idx":65,"payload":{"qid":"GUARD:00632","why":"guard target missing"},"reason":"gate-refused","round":107,"ts":"2026-10-04T03:42:56Z"}
+{"idx":66,"payload":{"qid":"TMSEQ:00500","why":"endpoint not in matrix: thread/Structural Integrity"},"reason":"gate-refused","round":107,"ts":"2026-10-04T03:42:56Z"}
+{"idx":67,"payload":{"qid":"REL-BOND:00079","why":"endpoint not in matrix: t-minus ledger (1)/tide"},"reason":"gate-refused","round":108,"ts":"2026-10-04T03:42:57Z"}

@@ -68,3 +68,4 @@
 {"idx":67,"payload":{"distinct":0.3,"essential":0.92,"parent":"shadow","sub":"Shadow as absence of light"},"reason":"decomp-rejected","round":133,"ts":"2026-10-04T03:42:21Z"}
 {"idx":68,"payload":{"qid":"GUARD:00635","why":"guard target missing"},"reason":"gate-refused","round":134,"ts":"2026-10-04T03:42:21Z"}
 {"idx":69,"payload":{"distinct":0.62,"essential":0.22,"parent":"gate","sub":"Sync Gate"},"reason":"decomp-rejected","round":138,"ts":"2026-10-04T03:42:27Z"}
+{"idx":70,"payload":{"qid":"REL-BOND:00251","why":"guarded node knot touched without provenance"},"reason":"gate-refused","round":141,"ts":"2026-10-04T03:42:30Z"}

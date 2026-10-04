@@ -1,0 +1,123 @@
+id,label,joy,entropy,value,origin_round,created_by,note
+acknowledgment,Acknowledgment,0.5,0.5,0.5,4,cell+oracle,tminus stage of receipt
+anticipatory-joy,anticipatory joy,0.61,0.5,0.48,0,weave:runs/night3,bridge joy<->t-minus 3
+arrow,arrow,0.54,0.45,0.5,0,seed,lexicon seed row
+birds-morning-songs-are-like-dawn-s-ech,Birds' morning songs are like dawn's ech,0.59,0.5,0.6625,0,weave:runs/night3,bridge dawn<->dawn-chorus
+blank-space,Blank Space,0.5,0.5,0.5,0,weave:runs/night3,tminus stage of song
+bloom,bloom,0.54,0.48,0.5,0,seed,lexicon seed row
+bouncer,bouncer,0.54,0.49,0.5,0,seed,lexicon seed row
+bridge,bridge,0.56,0.46,0.5,0,seed,lexicon seed row
+bridge-to-song,Bridge to Song,0.5,0.5,0.5,0,weave:runs/night3,tminus stage of song
+cadence,cadence,0.5,0.49,0.5,0,seed,lexicon seed row
+capillary,Capillary,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of surface
+cell,cell,0.54,0.45,0.5,0,seed,lexicon seed row
+chaos,chaos,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of static
+crease,Crease,0.5,0.5,0.5,24,cell+oracle,tminus stage of knot
+darkness-as-absence-of-light,Darkness as absence of light,0.7240000000000001,0.5,0.81,0,weave:runs/night3,decomp of shadow
+dawn,dawn,0.5,0.51,0.5,0,seed,lexicon seed row
+dawn-chorus,dawn-chorus,0.54,0.47000000000000003,0.5,0,seed,lexicon seed row
+dawn-s-warmth-awakens-the-field,Dawn's warmth awakens the field,0.8,0.5,0.5675,0,weave:runs/night3,bridge dawn<->field
+die,die,0.52,0.51,0.5,0,seed,lexicon seed row
+doodle,Doodle,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of drum
+dotted-line,Dotted Line,0.5,0.5,0.5,0,weave:runs/night3,tminus stage of gate
+drift,drift,0.56,0.49,0.5,0,seed,lexicon seed row
+drum,drum,0.56,0.51,0.5,0,seed,lexicon seed row
+dusk,dusk,0.56,0.48,0.5,0,seed,lexicon seed row
+echo,echo,0.58,0.45,0.5,0,seed,lexicon seed row
+echoes,echoes,0.5,0.5,0.5,93,cell+oracle,tminus stage of echo
+echoes-apparition,echoes(apparition),0.5,0.5,0.5,34,cell+oracle,tminus stage of mirror
+echoes-of-lost-moments-rewind,Echoes of lost moments rewind,0.52,0.5,0.545,66,cell+oracle,bridge mirror<->rewind
+echoes-seeker,echoes(seeker),0.5,0.5,0.5,106,cell+oracle,tminus stage of oracle
+ember,ember,0.52,0.49,0.5,0,seed,lexicon seed row
+entropy,entropy,0.52,0.46,0.5,0,seed,lexicon seed row
+ephemeral-blooms-echo-forgotten-melodies,Ephemeral blooms echo forgotten melodies,0.61,0.5,0.475,90,cell+oracle,bridge bloom<->song
+eyewitness-account,Eyewitness account,0.7040000000000001,0.5,0.76,15,cell+oracle,decomp of witness
+fades-to-decay,Fades to decay,0.71,0.5,0.615,0,weave:runs/night3,bridge drift<->die
+field,field,0.56,0.47000000000000003,0.5,0,seed,lexicon seed row
+field-theory,Field Theory,0.6080000000000001,0.5,0.52,0,weave:runs/night2,decomp of field
+fold,Fold,0.5,0.5,0.5,24,cell+oracle,tminus stage of knot
+fractals,fractals,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of tension
+fracture,fracture,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of static
+fracture-fuels-witness-s-introspection,Fracture fuels Witness's introspection,0.66,0.5,0.5725,108,cell+oracle,bridge fracture<->witness
+garden,garden,0.58,0.51,0.5,0,seed,lexicon seed row
+gate,gate,0.5,0.46,0.5,0,seed,lexicon seed row
+gate-ledger-access-control,Gate Ledger: Access Control,0.63,0.5,0.585,0,weave:runs/night2,bridge gate<->ledger
+germination,Germination,0.5,0.5,0.5,0,weave:runs/night3,tminus stage of bloom
+harmonic-overlap,Harmonic overlap,0.66,0.5,0.565,0,weave:runs/night2,bridge resonance<->plainsong
+inferno,inferno,0.5,0.5,0.5,0,weave:runs/night3,tminus stage of field
+init,init,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of loop
+interstitial,Interstitial,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of surface
+jam,jam,0.56,0.45,0.5,0,seed,lexicon seed row
+joy,joy,0.5,0.45,0.5,0,seed,lexicon seed row
+knot,knot,0.5,0.5,0.5,0,seed,lexicon seed row
+lattice,lattice,0.58,0.48,0.5,0,seed,lexicon seed row
+ledger,ledger,0.52,0.45,0.5,0,seed,lexicon seed row
+loop,loop,0.52,0.51,0.5,0,seed,lexicon seed row
+mirror,mirror,0.56,0.46,0.5,0,seed,lexicon seed row
+mitosis,Mitosis,0.732,0.5,0.83,10,cell+oracle,decomp of cell
+moth,moth,0.56,0.48,0.5,0,seed,lexicon seed row
+oracle,oracle,0.52,0.48,0.5,0,seed,lexicon seed row
+oscillates,oscillates,0.59,0.5,0.3775,34,cell+oracle,bridge tide<->cell
+oscillation-harmonics,Oscillation Harmonics,0.79,0.5,0.805,56,cell+oracle,bridge wire<->resonance
+plainsong,plainsong,0.58,0.46,0.5,0,seed,lexicon seed row
+prep,prep,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of loop
+quantum-fluctuation,Quantum Fluctuation,0.5,0.5,0.5,14,cell+oracle,tminus stage of value
+quilt,quilt,0.58,0.49,0.5,0,seed,lexicon seed row
+quilting-stitches-on-a-dying-fabric,Quilting stitches on a dying fabric,0.51,0.5,0.3925,93,cell+oracle,bridge quilt<->die
+random-pattern,Random Pattern,0.5,0.5,0.5,14,cell+oracle,tminus stage of value
+receipt,receipt,0.5,0.48,0.5,0,seed,lexicon seed row
+receipt-loops-back-to-accounting,Receipt loops back to accounting,0.65,0.5,0.47,0,weave:runs/night3,bridge receipt<->loop
+resonance,resonance,0.54,0.51,0.5,0,seed,lexicon seed row
+resonant-frequency,Resonant frequency,0.776,0.5,0.94,72,cell+oracle,decomp of resonance
+resonates,resonates,0.5,0.5,0.5,93,cell+oracle,tminus stage of echo
+resonates-accelerator,resonates(accelerator),0.5,0.5,0.5,65,cell+oracle,tminus stage of value
+resonates-architect,resonates(architect),0.5,0.5,0.5,65,cell+oracle,tminus stage of value
+resonates-dream,resonates(dream),0.5,0.5,0.5,106,cell+oracle,tminus stage of oracle
+resonates-tide,resonates(tide),0.5,0.5,0.5,84,cell+oracle,tminus stage of quilt
+resonates-witness,resonates(witness),0.5,0.5,0.5,34,cell+oracle,tminus stage of mirror
+rewind,rewind,0.52,0.49,0.5,0,seed,lexicon seed row
+rewind-to-plainsong-roots,Rewind to Plainsong Roots,0.56,0.5,0.4525,0,weave:runs/night3,bridge rewind<->plainsong
+rewinding-tension,Rewinding tension,0.52,0.5,0.475,51,cell+oracle,bridge rewind<->tension
+rhythmic-growth,Rhythmic growth,0.66,0.5,0.5225,0,weave:runs/night3,bridge cadence<->bloom
+rhythmic-patterns,Rhythmic Patterns,0.728,0.5,0.82,0,weave:runs/night3,decomp of drum
+scar,scar,0.5,0.5,0.5,0,seed,lexicon seed row
+seedling,Seedling,0.5,0.5,0.5,0,weave:runs/night3,tminus stage of bloom
+shadow,shadow,0.58,0.47000000000000003,0.5,0,seed,lexicon seed row
+silhouette,Silhouette,0.6080000000000001,0.5,0.52,0,weave:runs/night3,decomp of shadow
+silhouette-form,Silhouette Form,0.66,0.5,0.65,30,cell+oracle,decomp of shadow
+sketch,Sketch,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of drum
+slackwater,slackwater,0.5,0.47000000000000003,0.5,0,seed,lexicon seed row
+song,song,0.54,0.5,0.5,0,seed,lexicon seed row
+spark,spark,0.5,0.48,0.5,0,seed,lexicon seed row
+static,static,0.56,0.51,0.5,0,seed,lexicon seed row
+static-electricity-attracts-dust,Static Electricity Attracts Dust,0.6120000000000001,0.5,0.53,25,cell+oracle,decomp of static
+structural-integrity,Structural Integrity,0.784,0.5,0.96,0,weave:runs/night3,decomp of bridge
+surface,surface,0.58,0.47000000000000003,0.5,0,seed,lexicon seed row
+t-0,t-0,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of lattice
+t-1,t-1,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of lattice
+t-2,t-2,0.5,0.5,0.5,19,cell+oracle,tminus stage of drift
+t-3,t-3,0.5,0.5,0.5,19,cell+oracle,tminus stage of drift
+t-harmony,t-harmony,0.5,0.5,0.5,60,cell+oracle,tminus stage of garden
+t-minus,t-minus,0.58,0.5,0.5,0,seed,lexicon seed row
+t-minus-1-echo,T-minus 1: Echo,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of drift
+t-minus-2,t-minus 2,0.5,0.5,0.5,0,weave:runs/night3,tminus stage of wave
+t-minus-2-flux,T-minus 2: Flux,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of drift
+t-minus-3,t-minus 3,0.5,0.5,0.5,0,weave:runs/night3,tminus stage of wave
+t-minus-ledger-1,t-minus ledger (1),0.5,0.5,0.5,0,weave:runs/night3,tminus stage of ledger
+t-minus-ledger-2,t-minus ledger (2),0.5,0.5,0.5,0,weave:runs/night3,tminus stage of ledger
+t-minus-tension,t-minus(tension),0.5,0.5,0.5,60,cell+oracle,tminus stage of garden
+tension,tension,0.52,0.5,0.5,0,seed,lexicon seed row
+tension-wave,tension wave,0.5,0.5,0.5,39,cell+oracle,tminus stage of drum
+testimonial-value,testimonial value,0.696,0.5,0.74,62,cell+oracle,decomp of witness
+testimony,testimony,0.5,0.5,0.5,70,cell+oracle,tminus stage of witness
+testimony-2,Testimony,0.732,0.5,0.83,0,weave:runs/night3,decomp of witness
+thread,thread,0.58,0.49,0.5,0,seed,lexicon seed row
+tide,tide,0.5,0.45,0.5,0,seed,lexicon seed row
+value,value,0.54,0.47000000000000003,0.5,0,seed,lexicon seed row
+velvet,velvet,0.54,0.5,0.5,0,seed,lexicon seed row
+vibrational-hum,vibrational hum,0.5,0.5,0.5,39,cell+oracle,tminus stage of drum
+walker,walker,0.56,0.5,0.5,0,seed,lexicon seed row
+wave,wave,0.52,0.46,0.5,0,seed,lexicon seed row
+wire,wire,0.52,0.47000000000000003,0.5,0,seed,lexicon seed row
+witness,witness,0.54,0.46,0.5,0,seed,lexicon seed row
+witness-testimony,Witness testimony,0.7120000000000001,0.5,0.78,6,cell+oracle,decomp of witness

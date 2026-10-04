@@ -6,7 +6,7 @@ bloom->resonance:resonates,bloom,resonance,resonates,0.6476782056700899,0.180000
 bouncer->loop:resonates,bouncer,loop,resonates,0.6311831398446439,0.37,0.45750000000000013,6,oracle,REL-BOND:00059,
 bridge->structural-integrity:feeds,bridge,structural-integrity,feeds,0.96,0.040000000000000036,0.96,119,oracle,DECOMP:00266,
 cadence->cell:resonates,cadence,cell,resonates,0.6385594770477511,0.18,0.4350000000000001,29,oracle,REL-BOND:00167,
-cadence->garden:resonates,cadence,garden,resonates,0.7513827913184027,0.14,0.5425000000000002,35,oracle,REL-BOND:00091,
+cadence->garden:resonates,cadence,garden,resonates,0.7612280327821939,0.14,0.5625000000000002,35,oracle,REL-BOND:00091,
 cadence->rhythmic-growth:bridges,cadence,rhythmic-growth,bridges,0.6988135905062401,0.4,0.6225,41,oracle,BRIDGE:00316,
 cell->drum:echoes,cell,drum,echoes,0.44,0.18,0.18,69,oracle,REL-BOND:00058,
 cell->slackwater:echoes,cell,slackwater,echoes,0.41,0.22,0.1875,84,oracle,REL-BOND:00145,
@@ -33,8 +33,8 @@ fades-to-decay->die:bridges,fades-to-decay,die,bridges,0.71,0.4,0.615,128,oracle
 field->ember:echoes,field,ember,echoes,0.47735299529024,0.7,0.36000000000000004,9,moth,MOTHDRIFT:00520,moth-drift
 field->quilt:resonates,field,quilt,resonates,0.5757106464,0.21,0.37250000000000005,63,oracle,REL-BOND:00115,
 garden->plainsong:echoes,garden,plainsong,echoes,0.462176,0.6599999999999999,0.32,111,moth,MOTHDRIFT:00549,moth-drift
-garden->tension:resonates,garden,tension,resonates,0.6158399999999999,0.31,0.365,92,oracle,REL-BOND:00190,
-garden->walker:resonates,garden,walker,resonates,0.5149,0.22999999999999998,0.741,93,oracle,ECHO:00650,
+garden->tension:resonates,garden,tension,resonates,0.6235231999999999,0.31,0.375,92,oracle,REL-BOND:00190,
+garden->walker:resonates,garden,walker,resonates,0.524602,0.22999999999999998,0.751,93,oracle,ECHO:00650,
 germination->seedling:tminus,germination,seedling,tminus,0.9652432334571482,0.050000000000000044,1.0,46,oracle,TMSEQ:00415,
 joy->anticipatory-joy:bridges,joy,anticipatory-joy,bridges,0.693960477743428,0.4,0.6400000000000001,108,oracle,BRIDGE:00336,
 joy->gate:resonates,joy,gate,resonates,0.42471404413019653,0.16,0.8420000000000001,54,oracle,ECHO:00637,
@@ -64,8 +64,9 @@ song->tide:resonates,song,tide,resonates,0.53881592,0.2,0.77,42,oracle,ECHO:0065
 static->dusk:resonates,static,dusk,resonates,0.48,0.26,0.722,130,oracle,ECHO:00678,
 static->lattice:resonates,static,lattice,resonates,0.466978,0.15000000000000002,0.775,85,oracle,ECHO:00662,
 t-minus-3->t-minus-2:tminus,t-minus-3,t-minus-2,tminus,0.9127225088988101,0.16000000000000003,1.0,11,oracle,TMSEQ:00453,
+t-minus->velvet:resonates,t-minus,velvet,resonates,0.245,0.15,0.755,142,oracle,ECHO:00689,
 t-minus-ledger-1->t-minus-ledger-2:tminus,t-minus-ledger-1,t-minus-ledger-2,tminus,0.8038208190662999,0.25,0.9400000000000002,52,oracle,TMSEQ:00436,
-tension->loop:resonates,tension,loop,resonates,0.6206447682307817,0.15000000000000002,0.8650000000000001,7,oracle,ECHO:00643,
+tension->loop:resonates,tension,loop,resonates,0.6356672354088427,0.15000000000000002,0.8850000000000001,7,oracle,ECHO:00643,
 thread->song:echoes,thread,song,echoes,0.44469672,0.61,0.35000000000000003,16,moth,MOTHDRIFT:00558,moth-drift
 thread->tide:resonates,thread,tide,resonates,0.68,0.21,0.395,109,oracle,REL-BOND:00068,
 tide->wire:echoes,tide,wire,echoes,0.49,0.79,0.3,131,moth,MOTHDRIFT:00577,moth-drift
