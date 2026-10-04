@@ -534,7 +534,15 @@ def main() -> int:
                     else:
                         sc, persona, p, answers = best
                         slots2 = dict(row["slots"])
-                        slots2.update({"b": p["b"], "c": p.get("c", ""), "question_id": row["qid"]})
+                        if fam_id == "BRIDGE":
+                            # the proposal IS the bridge concept → it lands in C;
+                            # B stays the original distant endpoint
+                            slots2["c"] = p["b"]
+                            slots2["bridge_note"] = p.get("note", "")
+                        else:
+                            slots2["b"] = p["b"]
+                            slots2["c"] = p.get("c", "")
+                        slots2["question_id"] = row["qid"]
                         payload = apply_family(fam_id, {**row, "slots": slots2}, answers,
                                                matrix, round_no, scars, aux)
                         applied.append({**payload, "winner": persona, "score": round(sc, 3)})

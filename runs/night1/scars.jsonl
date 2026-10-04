@@ -2,3 +2,5 @@
 {"idx":1,"payload":{"a":"bloom","b":"Nexus of Growth","bridges":0.46,"c":""},"reason":"bridge-rejected","round":5,"ts":"2026-10-04T02:06:48Z"}
 {"idx":2,"payload":{"edge":"receipt->acknowledgment:tminus","repairable":0.585,"suspicious":0.73},"reason":"tension-audit","round":7,"ts":"2026-10-04T02:06:51Z"}
 {"idx":3,"payload":{"a":"lattice","b":"rewind","fits":0.4},"reason":"moth-drift-rejected","round":8,"ts":"2026-10-04T02:06:52Z"}
+{"idx":4,"payload":{"family":"TMSEQ","qid":"TMSEQ:00407"},"reason":"cell-indeterminate","round":9,"ts":"2026-10-04T02:06:56Z"}
+{"idx":5,"payload":{"a":"cell","b":"jam","bridges":0.26,"c":"Cell division creates traffic jam"},"reason":"bridge-rejected","round":14,"ts":"2026-10-04T02:07:31Z"}
