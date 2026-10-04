@@ -37,3 +37,8 @@
 {"idx":36,"payload":{"a":"dawn-chorus","b":"spark","fits":0.2},"reason":"moth-drift-rejected","round":80,"ts":"2026-10-04T03:37:17Z"}
 {"idx":37,"payload":{"family":"DECOMP","qid":"DECOMP:00274"},"reason":"cell-indeterminate","round":94,"ts":"2026-10-04T03:39:06Z"}
 {"idx":38,"payload":{"qid":"TENSION:00392","why":"endpoint not in matrix: loop/t-minus 3"},"reason":"gate-refused","round":95,"ts":"2026-10-04T03:39:06Z"}
+{"idx":39,"payload":{"qid":"REL-BOND:00137","why":"endpoint not in matrix: Silhouette/ledger"},"reason":"gate-refused","round":97,"ts":"2026-10-04T03:39:09Z"}
+{"idx":40,"payload":{"qid":"ECHO:00674","why":"endpoint not in matrix: t-minus 3/spark"},"reason":"gate-refused","round":98,"ts":"2026-10-04T03:39:09Z"}
+{"idx":41,"payload":{"distinct":0.4,"essential":0.15,"parent":"knot","sub":"Tangled harmonics"},"reason":"decomp-rejected","round":99,"ts":"2026-10-04T03:39:11Z"}
+{"idx":42,"payload":{"qid":"GUARD:00579","why":"guard target missing"},"reason":"gate-refused","round":99,"ts":"2026-10-04T03:39:11Z"}
+{"idx":43,"payload":{"qid":"SOUND:00472","why":"endpoint not in matrix: Receipt loops back to accounting/scar"},"reason":"gate-refused","round":101,"ts":"2026-10-04T03:39:12Z"}
