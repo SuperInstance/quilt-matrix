@@ -3,3 +3,9 @@
 {"idx":2,"payload":{"a":"ledger","b":"slackwater","bridges":0.34,"c":"Transom"},"reason":"bridge-rejected","round":6,"ts":"2026-10-04T03:25:58Z"}
 {"idx":3,"payload":{"distinct":0.31,"essential":0.92,"parent":"song","sub":"Rhythm and Melody"},"reason":"decomp-rejected","round":7,"ts":"2026-10-04T03:26:00Z"}
 {"idx":4,"payload":{"distinct":0.28,"essential":0.82,"parent":"velvet","sub":"Luxurious fabric texture"},"reason":"decomp-rejected","round":13,"ts":"2026-10-04T03:26:21Z"}
+{"idx":5,"payload":{"a":"jam","b":"cell","bridges":0.25,"c":"Tissue Bridge"},"reason":"bridge-rejected","round":18,"ts":"2026-10-04T03:28:26Z"}
+{"idx":6,"payload":{"edge":"bouncer->loop:resonates","repairable":0.4775,"suspicious":0.73},"reason":"tension-audit","round":19,"ts":"2026-10-04T03:30:56Z"}
+{"idx":7,"payload":{"a":"ledger","b":"cell","fits":0.32},"reason":"moth-drift-rejected","round":20,"ts":"2026-10-04T03:31:10Z"}
+{"idx":8,"payload":{"qid":"GUARD:00566","why":"guard target missing"},"reason":"gate-refused","round":21,"ts":"2026-10-04T03:31:10Z"}
+{"idx":9,"payload":{"a":"wave","b":"receipt","bridges":0.5,"c":"Ripples on Water resemble Crinkled Recei"},"reason":"bridge-rejected","round":23,"ts":"2026-10-04T03:31:13Z"}
+{"idx":10,"payload":{"distinct":0.75,"essential":0.43,"parent":"receipt","sub":"Receipt Validation"},"reason":"decomp-rejected","round":24,"ts":"2026-10-04T03:31:15Z"}

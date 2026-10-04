@@ -1,0 +1,15 @@
+edge_id,src,dst,rel_type,joy,entropy,value,origin_round,created_by,question_id,note
+birds-morning-songs-are-like-dawn-s-ech->dawn-chorus:bridges,birds-morning-songs-are-like-dawn-s-ech,dawn-chorus,bridges,0.59,0.4,0.6625,12,oracle,BRIDGE:00315,
+blank-space->bridge-to-song:tminus,blank-space,bridge-to-song,tminus,0.82,0.18000000000000005,0.8,5,oracle,TMSEQ:00442,
+bouncer->loop:resonates,bouncer,loop,resonates,0.5664869648,0.37,0.37750000000000006,6,oracle,REL-BOND:00059,
+cell->tension:resonates,cell,tension,resonates,0.71188,0.21,0.4925,12,oracle,REL-BOND:00117,
+dawn->birds-morning-songs-are-like-dawn-s-ech:bridges,dawn,birds-morning-songs-are-like-dawn-s-ech,bridges,0.59,0.4,0.6625,12,oracle,BRIDGE:00315,
+dotted-line->gate:tminus,dotted-line,gate,tminus,0.82,0.18000000000000005,0.8,22,oracle,TMSEQ:00431,
+drum->moth:echoes,drum,moth,echoes,0.37,0.16,0.1425,23,oracle,REL-BOND:00076,
+ember->dawn-chorus:resonates,ember,dawn-chorus,resonates,0.5700000000000001,0.16000000000000003,0.812,1,oracle,ECHO:00616,
+field->ember:echoes,field,ember,echoes,0.41,0.7,0.3,9,moth,MOTHDRIFT:00520,moth-drift
+ledger->tension:resonates,ledger,tension,resonates,0.4327435816,0.19,0.783,13,oracle,ECHO:00625,
+scar->dawn-chorus:resonates,scar,dawn-chorus,resonates,0.37,0.19999999999999996,0.74,24,oracle,ECHO:00650,
+t-minus-3->t-minus-2:tminus,t-minus-3,t-minus-2,tminus,0.84,0.16000000000000003,0.8,11,oracle,TMSEQ:00453,
+tension->loop:resonates,tension,loop,resonates,0.5630179999999999,0.15000000000000002,0.775,7,oracle,ECHO:00643,
+thread->song:echoes,thread,song,echoes,0.41,0.61,0.3,16,moth,MOTHDRIFT:00558,moth-drift
