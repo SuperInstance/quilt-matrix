@@ -33,6 +33,7 @@ oracle,oracle,0.52,0.48,0.5,0,seed,lexicon seed row
 plainsong,plainsong,0.58,0.46,0.5,0,seed,lexicon seed row
 quilt,quilt,0.58,0.49,0.5,0,seed,lexicon seed row
 receipt,receipt,0.5,0.48,0.5,0,seed,lexicon seed row
+receipt-loops-back-to-accounting,Receipt loops back to accounting,0.65,0.5,0.47,29,cell+oracle,bridge receipt<->loop
 resonance,resonance,0.54,0.51,0.5,0,seed,lexicon seed row
 rewind,rewind,0.52,0.49,0.5,0,seed,lexicon seed row
 scar,scar,0.5,0.5,0.5,0,seed,lexicon seed row

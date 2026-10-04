@@ -3,3 +3,4 @@ cluster,mode,brightness,density,velocity,round
 "[""walker"", ""velvet""]",minor,0.36,0.085,0.27,10
 "[""field"", ""dawn""]",lydian,0.723,0.06,0.27,17
 "[""entropy"", ""tide""]",lydian,0.347,0.138,0.395,21
+"[""jam"", ""walker""]",pentatonic,0.58,0.06,0.27,27

@@ -9,3 +9,9 @@
 {"idx":8,"payload":{"qid":"GUARD:00566","why":"guard target missing"},"reason":"gate-refused","round":21,"ts":"2026-10-04T03:31:10Z"}
 {"idx":9,"payload":{"a":"wave","b":"receipt","bridges":0.5,"c":"Ripples on Water resemble Crinkled Recei"},"reason":"bridge-rejected","round":23,"ts":"2026-10-04T03:31:13Z"}
 {"idx":10,"payload":{"distinct":0.75,"essential":0.43,"parent":"receipt","sub":"Receipt Validation"},"reason":"decomp-rejected","round":24,"ts":"2026-10-04T03:31:15Z"}
+{"idx":11,"payload":{"a":"rewind","b":"moth","fits":0.34},"reason":"moth-drift-rejected","round":26,"ts":"2026-10-04T03:31:31Z"}
+{"idx":12,"payload":{"family":"TMSEQ","qid":"TMSEQ:00456"},"reason":"cell-indeterminate","round":28,"ts":"2026-10-04T03:31:33Z"}
+{"idx":13,"payload":{"qid":"GUARD:00566","why":"guard target missing"},"reason":"gate-refused","round":28,"ts":"2026-10-04T03:31:33Z"}
+{"idx":14,"payload":{"distinct":0.26,"essential":0.09,"parent":"plainsong","sub":"Plainsong relates to ancient numerology"},"reason":"decomp-rejected","round":30,"ts":"2026-10-04T03:31:36Z"}
+{"idx":15,"payload":{"qid":"PLAY:00668","why":"endpoint not in matrix: Birds' morning songs are like dawn's ech/walker"},"reason":"gate-refused","round":31,"ts":"2026-10-04T03:31:36Z"}
+{"idx":16,"payload":{"a":"thread","b":"tension","fits":0.4},"reason":"moth-drift-rejected","round":32,"ts":"2026-10-04T03:31:51Z"}
