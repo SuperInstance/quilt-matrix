@@ -1,16 +1,23 @@
-"""engine/moth.py — mothquantum channel: true quantum entropy + quantum music.
+"""engine/moth.py — mothquantum channel: certified entropy + quantum music.
 
-Verified 2026-10-04 (recon/scout-2a/moth_engines.md): GET /api/v1/engines
-returns 32 engines WITH the header `Accept: application/json` (content
-negotiation was the whole mystery). Relevant engines:
+Verified 2026-10-04 (night of the deep probe — docs/MOTH-PROBE.md, 97
+receipted requests): the full qrc-midi-v1 contract is FOUND and the asset
+flow is cracked. Truths this module now encodes:
 
-  coin-toss-v1  — true quantum bits → the Die Engine's entropy source
-  qrc-midi-v1   — quantum-generated MIDI (→ .mid bytes) — moth AS a musician
-  qpixl-v1      — numbers-as-waveform round trip
-  graph-v1      — quantum graph states
-
-Job flow: POST /api/v1/engines/{engine}/process {params} → job_id →
-poll GET /api/v1/jobs/{id}/status → GET /api/v1/jobs/{id}/result.
+  - Engines are async: POST /engines/{e}/process (JSON) → 202 {job_id} →
+    poll GET /jobs/{id}/status until status == "completed" (NOT "succeeded"
+    — we polled 40 rounds against the wrong word once) → GET /jobs/{id} for
+    outputs[] ({slot, output_asset_id, content_type}).
+  - Assets: POST /assets {filename, content_type, size_bytes} → 201 with a
+    presigned S3 upload.url; PUT bytes there with NO auth headers (presigned
+    signatures reject extra auth) and the EXACT registered content type;
+    POST /assets/{id}/complete. Download is the mirror: GET
+    /assets/{id}/download → {download_url} → raw GET.
+  - qrc-midi-v1: {"input_files": {"midi": <asset_id>}, "params": {"bpm"}}.
+    multipart is 415 (metadata lies); the error surface is cooperative —
+    422s name the exact missing property. Engine needs ≥2 distinct notes.
+  - comet-qrng-v1 {"mode":"emu"} → 32 certified bytes/call (SP 800-90B,
+    Toeplitz, CHSH S≈2.8) — wired into quantum_bytes since the first night.
 Key: MOTH_API_KEY env or the fleet vault. Key NEVER lands in logs.
 """
 
@@ -102,24 +109,113 @@ def quantum_bytes(n_bytes: int = 8) -> str | None:
         return None
 
 
-def midi_via_moth(params: dict) -> bytes | None:
-    """qrc-midi-v1: quantum-generated MIDI bytes (the moth as a musician).
-    Returns raw .mid bytes or None — the caller receipts the outcome either
-    way; never silent."""
+def _raw(method: str, url: str, data: bytes | None = None,
+         headers: dict | None = None, timeout_s: float = 60.0) -> bytes:
+    """Raw transport for presigned S3 URLs: NO Authorization/X-Api-Key (the
+    signature IS the auth; extra headers corrupt it — observed 400), exact
+    Content-Type, browser UA (S3 does not care, but consistency is free)."""
+    h = {"User-Agent": "quilt-matrix/1.0"}
+    if headers:
+        h.update(headers)
+    req = urllib.request.Request(url, data=data, method=method, headers=h)
+    with urllib.request.urlopen(req, timeout=timeout_s) as resp:
+        return resp.read()
+
+
+def asset_upload(data: bytes, filename: str, content_type: str) -> str:
+    """Three-step upload (MOTH-PROBE.md §2), all steps verified live.
+    Returns asset_id. Raises on any step — callers receipt the outcome."""
+    created = _call("POST", "/assets", {"filename": filename,
+                                        "content_type": content_type,
+                                        "size_bytes": len(data)})
+    aid = created.get("asset_id") or (created.get("data") or {}).get("asset_id")
+    up = created.get("upload") or {}
+    url = up.get("url") if isinstance(up, dict) else None
+    if not aid or not url:
+        raise RuntimeError(f"asset create missing fields: {list(created)}")
+    _raw("PUT", url, data, {"Content-Type": content_type})
+    _call("POST", f"/assets/{aid}/complete", {})
+    return aid
+
+
+def asset_download(asset_id: str) -> bytes:
+    """Mirror of upload: GET /assets/{id}/download → presigned GET → bytes."""
+    d = _call("GET", f"/assets/{asset_id}/download")
+    url = d.get("download_url") or d.get("url")
+    if not url:
+        raise RuntimeError(f"no download_url for {asset_id}")
+    return _raw("GET", url)
+
+
+def job_wait(job_id: str, timeout_s: float = 420.0, poll_s: float = 4.0) -> dict:
+    """Poll /jobs/{id}/status to a TERMINAL state ('completed' — the moth's
+    word, not 'succeeded'), then return the FULL /jobs/{id} record with
+    outputs[]. Raises on failure/timeout."""
+    deadline = time.monotonic() + timeout_s
+    while time.monotonic() < deadline:
+        time.sleep(poll_s)
+        st = _call("GET", f"/jobs/{job_id}/status", timeout_s=15.0)
+        state = st.get("status") or (st.get("data") or {}).get("status")
+        if state == "completed":
+            return _call("GET", f"/jobs/{job_id}", timeout_s=30.0)
+        if state in ("failed", "cancelled"):
+            raise RuntimeError(f"job {job_id} {state}: {st.get('error')}")
+    raise RuntimeError(f"job {job_id} timed out after {timeout_s}s")
+
+
+def qrc_midi(midi_bytes: bytes, bpm: int = 120,
+             timeout_s: float = 420.0) -> tuple[bytes | None, dict | None, dict]:
+    """The full receipted round trip (MOTH-PROBE.md §4): upload the matrix's
+    melody, let the quantum reservoir learn it, bring home the arrangement
+    AND the learned model (the model is itself an artifact we keep).
+    Returns (result_mid_bytes | None, model_dict | None, info)."""
+    info: dict = {"pipeline": "qrc-midi-v1"}
     try:
-        r = run_job("qrc-midi-v1", params, timeout_s=120.0)
-        if not r["ok"]:
-            return None
-        b64 = None
-        res = r["result"] or {}
-        if isinstance(res, dict):
-            b64 = res.get("midi_b64") or res.get("midi") or res.get("file_b64")
-        outs = r.get("outputs") or {}
-        if not b64 and isinstance(outs, dict):
-            b64 = outs.get("midi_b64") or outs.get("midi")
-        if not b64:
-            return None
-        import base64
-        return base64.b64decode(b64)
-    except Exception:
+        aid = asset_upload(midi_bytes, "jev-path.mid", "audio/midi")
+        info["input_asset"] = aid
+        sub = _call("POST", "/engines/qrc-midi-v1/process",
+                    {"input_files": {"midi": aid}, "params": {"bpm": bpm}})
+        jid = sub.get("job_id")
+        if not jid:
+            info["error"] = f"submit: {sub}"
+            return None, None, info
+        info["job"] = jid
+        job = job_wait(jid, timeout_s=timeout_s)
+        outs = job.get("outputs") or []
+        res_aid = next((o["output_asset_id"] for o in outs
+                        if o.get("slot") == "result"), None)
+        mod_aid = next((o["output_asset_id"] for o in outs
+                        if o.get("slot") == "model"), None)
+        if res_aid:
+            data = asset_download(res_aid)
+            if data[:4] == b"MThd":
+                info["result_bytes"] = len(data)
+                info["ok"] = True
+            else:
+                info["error"] = "result is not SMF"
+                data = None
+        else:
+            data, info["error"] = None, "no result slot"
+        model = None
+        if mod_aid:
+            try:
+                model = json.loads(asset_download(mod_aid).decode())
+                info["model_keys"] = sorted(model)[:8]
+            except Exception as e:  # model is a bonus, never fatal
+                info["model_error"] = str(e)[:80]
+        return data, model, info
+    except Exception as e:
+        info["error"] = str(e)[:160]
+        return None, None, info
+
+
+def midi_via_moth(params: dict) -> bytes | None:
+    """Legacy shim (pre-contract). The probe-proven path is qrc_midi(); this
+    shim now routes through it when given raw midi bytes under 'midi_bytes',
+    else returns None (the old params-only submit shape was 415/422 — the
+    route was never params-driven)."""
+    raw = params.get("midi_bytes")
+    if not raw:
         return None
+    data, _model, _info = qrc_midi(raw, bpm=params.get("bpm", 120))
+    return data

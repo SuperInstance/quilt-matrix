@@ -38,6 +38,7 @@ HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, HERE)
 
 from engine import cells, die, jev, moth, typesafe_q            # noqa: E402
+from engine.guards import GuardRegistry                          # noqa: E402
 from engine.matrix import Matrix, clamp01                        # noqa: E402
 from engine.music import (MidiWriter, duet_note, jev_melody,     # noqa: E402
                           round_chord, scar_hit)
@@ -131,9 +132,14 @@ def norm_score(ans: dict) -> float:
 
 
 def apply_family(fam_id: str, row: dict, answers: dict, matrix: Matrix,
-                 round_no: int, scars: ScarLog, aux) -> dict:
+                 round_no: int, scars: ScarLog, aux,
+                 guards_all: frozenset | set | None = None,
+                 registry: "GuardRegistry | None" = None,
+                 run_name: str = "") -> dict:
     """Mechanical transcription: oracle answers → spreadsheet rows.
-    Returns a receipt payload."""
+    Returns a receipt payload. guards_all = per-run ∪ cross-run registry;
+    registry (when given) receives every fresh mint, so a guard earned
+    tonight protects the node in every future night."""
     slots = row.get("slots", {})
     a, b, c = slots.get("a"), slots.get("b"), slots.get("c")
     out: dict = {"family": fam_id, "qid": row["qid"]}
@@ -143,10 +149,11 @@ def apply_family(fam_id: str, row: dict, answers: dict, matrix: Matrix,
     # guarded node is refused (INDETERMINATE-style) and scarred — never
     # silently dropped, never allowed through un-specced.
     edge_writers = {"REL-BOND", "TMSEQ", "BRIDGE", "ECHO", "PLAY", "MOTHDRIFT"}
+    _gset = guards_all if guards_all is not None else {r["node"] for r in aux["guards"][0]}
     if fam_id in edge_writers and not row.get("qid"):
         for lbl in (a, b, c):
             nid = _nid(matrix, lbl)
-            if nid and nid in {r["node"] for r in aux["guards"][0]}:
+            if nid and nid in _gset:
                 scars.scar(round_no, "spec-missing",
                            {"family": fam_id, "guarded": nid, "label": lbl})
                 out.update({"refused": "spec-missing", "guarded": nid})
@@ -262,6 +269,15 @@ def apply_family(fam_id: str, row: dict, answers: dict, matrix: Matrix,
         if ng > 0.5 and na:
             append_aux(aux["guards"], {"node": na, "strength": round(gs, 3),
                                        "round": round_no})
+            if registry is not None:
+                registry.mint(na, round(gs, 3), round_no, run_name,
+                              reason=f"guard-question:{row['qid']}")
+            if guards_all is not None:
+                guards_all.add(na)  # guarded for every future run, now
+            ledger.append("guard-mint", round_no,
+                          {"node": na, "strength": round(gs, 3),
+                           "registry_size": registry.count() if registry else None},
+                          matrix.matrix_hash())
             out.update({"guarded": na, "strength": round(gs, 3)})
         else:
             out.update({"guarded": None, "needs_guard": ng})
@@ -367,6 +383,10 @@ def main() -> int:
     ap.add_argument("--run", required=True)
     ap.add_argument("--rounds", type=int, default=16)
     ap.add_argument("--pool-seed", type=int, default=42)
+    ap.add_argument("--rotation", default=None,
+                    help="comma list of family ids overriding the standard "
+                         "rotation — a night's declared 'varying logic' "
+                         "experiment, receipted in the ledger")
     ap.add_argument("--no-moth", action="store_true")
     ap.add_argument("--no-music", action="store_true")
     ap.add_argument("--no-cells", action="store_true", help="oracle-only rounds")
@@ -402,6 +422,24 @@ def main() -> int:
     if new_board:
         bwr.writeheader()
 
+    # CROSS-RUN GUARD REGISTRY: sync every sibling run's guards into the
+    # repo-level hash-chained registry, then the effective guard set is
+    # per-run ∪ registry. A guard minted in any night protects the node
+    # in every night; mints below append through to the registry too.
+    import glob as _glob
+    runs_root = os.path.dirname(os.path.abspath(run_dir))
+    registry = GuardRegistry(os.path.join(runs_root, "guard_registry.jsonl"))
+    for gcsv in sorted(_glob.glob(os.path.join(runs_root, "*", "guards.csv"))):
+        registry.sync_from_run(os.path.dirname(gcsv),
+                               os.path.basename(os.path.dirname(gcsv)))
+    guards_all = _guards(aux) | registry.nodes()
+    if registry.count():
+        ledger.append("guard-registry-sync", len(ledger.lines),
+                      {"registry_size": registry.count(),
+                       "imported": registry.count(),
+                       "chain_ok": registry.chain_ok(),
+                       "nodes": sorted(registry.nodes())}, matrix.matrix_hash())
+
     pool = build_pool(matrix.concepts(20, random.Random(args.pool_seed)), seed=args.pool_seed)
     fams_by_id = {f["id"]: f for f in load_index()["families"]}
     spec_seals = {fid: spec_sha(f) for fid, f in fams_by_id.items()}
@@ -418,8 +456,12 @@ def main() -> int:
 
     rng = random.Random(args.pool_seed * 1000 + len(ledger.lines))
     mhash = matrix.matrix_hash()
-    fam_rotation = ["REL-BOND", "DECOMP", "ECHO", "TENSION", "PLAY", "MOTHDRIFT",
-                    "SOUND", "GUARD", "TMSEQ", "BRIDGE"]
+    fam_rotation = [s.strip() for s in args.rotation.split(",")] if args.rotation \
+        else ["REL-BOND", "DECOMP", "ECHO", "TENSION", "PLAY", "MOTHDRIFT",
+              "SOUND", "GUARD", "TMSEQ", "BRIDGE"]
+    if args.rotation:
+        ledger.append("rotation-experiment", len(ledger.lines),
+                      {"rotation": fam_rotation}, mhash)
     fam_pos = len(ledger.lines) % len(fam_rotation)
     t_start = time.time()
     print(f"RUN {args.run}: pool={len(pool)} round_start={len(ledger.lines) // 6} "
@@ -445,7 +487,7 @@ def main() -> int:
             if spec_seals[fam_id] != row["spec_sha"]:  # anti-post-hoc law
                 ledger.append("spec-drift", round_no, {"family": fam_id}, mhash)
                 continue  # pool/INDEX mismatch refused
-            ok, why = gate_candidate(matrix, fam_id, row.get("slots", {}), guards=_guards(aux))
+            ok, why = gate_candidate(matrix, fam_id, row.get("slots", {}), guards=guards_all)
             if not ok:
                 scars.scar(round_no, "gate-refused", {"qid": row["qid"], "why": why})
                 scarred_this += 1
@@ -549,7 +591,9 @@ def main() -> int:
                             slots2["c"] = p.get("c", "")
                         slots2["question_id"] = row["qid"]
                         payload = apply_family(fam_id, {**row, "slots": slots2}, answers,
-                                               matrix, round_no, scars, aux)
+                                               matrix, round_no, scars, aux,
+                                               guards_all=guards_all, registry=registry,
+                                               run_name=os.path.basename(os.path.abspath(args.run)))
                         applied.append({**payload, "winner": persona, "score": round(sc, 3)})
                         ledger.append("mutation", round_no, payload, matrix.matrix_hash())
                         duet_seed = f"{persona}:{row['qid']}"
@@ -566,7 +610,9 @@ def main() -> int:
                     oracle_fails += 1
                     ledger.append("oracle-fail", round_no, {"qid": row["qid"], "error": str(e)[:160]}, mhash)
                     continue
-                payload = apply_family(fam_id, row, answers, matrix, round_no, scars, aux)
+                payload = apply_family(fam_id, row, answers, matrix, round_no, scars, aux,
+                                       guards_all=guards_all, registry=registry,
+                                       run_name=os.path.basename(os.path.abspath(args.run)))
                 applied.append(payload)
                 ledger.append("mutation", round_no, payload, matrix.matrix_hash())
 
