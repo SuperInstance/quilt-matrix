@@ -24,3 +24,6 @@
 {"idx":23,"payload":{"distinct":0.45,"essential":0.5,"parent":"lattice","sub":"Lattice of Connections"},"reason":"decomp-rejected","round":48,"ts":"2026-10-04T03:32:38Z"}
 {"idx":24,"payload":{"a":"t-minus","b":"tide","fits":0.25},"reason":"moth-drift-rejected","round":50,"ts":"2026-10-04T03:32:54Z"}
 {"idx":25,"payload":{"a":"lattice","b":"entropy","fits":0.24},"reason":"moth-drift-rejected","round":56,"ts":"2026-10-04T03:33:18Z"}
+{"idx":26,"payload":{"qid":"SOUND:00505","why":"endpoint not in matrix: t-minus 3/oracle"},"reason":"gate-refused","round":57,"ts":"2026-10-04T03:33:20Z"}
+{"idx":27,"payload":{"family":"TMSEQ","qid":"TMSEQ:00458"},"reason":"cell-indeterminate","round":58,"ts":"2026-10-04T03:33:21Z"}
+{"idx":28,"payload":{"distinct":0.5,"essential":0.14,"parent":"tension","sub":"cellular entropy"},"reason":"decomp-rejected","round":59,"ts":"2026-10-04T03:36:08Z"}

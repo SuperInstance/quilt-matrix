@@ -132,8 +132,18 @@ def build_pool(matrix_labels: list[str], seed: int = 42, cap_per_family: int = 2
                     questions = {"before": {"type": "noul", "instructions": _fill(q["before"]["instructions"], a=a, b=b, c=c)}}
                 else:
                     state = _fill(fam["state"], a=a, paper="[]", joy=0.5, entropy=0.5, value=0.5, degree=0)
-                    questions = {k: {"type": v["type"], "instructions": _fill(v["instructions"], a=a, b="{b}", degree=0)}
-                                 for k, v in q.items()}
+                    # BUGFIX (night3 diagnosis): this generic branch used to copy
+                    # only type+instructions, silently dropping criteria — so every
+                    # GUARD score question 422'd at the oracle, every night, and
+                    # no guard was ever minted. The oracle-fail receipts were the
+                    # trail. Criteria now propagate for ALL question types.
+                    questions = {}
+                    for k, v in q.items():
+                        qq = {"type": v["type"],
+                              "instructions": _fill(v["instructions"], a=a, b="{b}", degree=0)}
+                        if "criteria" in v:
+                            qq["criteria"] = v["criteria"]
+                        questions[k] = qq
                 row = {"qid": f"{fid}:{len(pool):05d}", "family": fid, "state": state,
                        "questions": questions, "spec_sha": spec_sha(fam), "slots": slots}
                 pool.append(row)
@@ -148,12 +158,16 @@ def build_pool(matrix_labels: list[str], seed: int = 42, cap_per_family: int = 2
                 b = rng.choice(others)
                 c = rng.choice([x for x in labels if x not in (a, b)])
                 state = _fill(fam["state"], a=a, b=b, c=c, prov="pending")
-                questions = {k: {"type": v["type"], "instructions": _fill(v["instructions"], a=a, b=b, c=c)}
-                             for k, v in q.items()}
-                if "weight" in q:
-                    questions["weight"]["criteria"] = q["weight"]["criteria"]
-                if "mode" in q:
-                    questions["mode"]["criteria"] = q["mode"]["criteria"]
+                # criteria propagation made generic here too (same bug class as
+                # the GUARD fix: explicit weight/mode re-adds could not cover a
+                # family that adds another score/choice question later)
+                questions = {}
+                for k, v in q.items():
+                    qq = {"type": v["type"],
+                          "instructions": _fill(v["instructions"], a=a, b=b, c=c)}
+                    if "criteria" in v:
+                        qq["criteria"] = v["criteria"]
+                    questions[k] = qq
                 row = {"qid": f"{fid}:{len(pool):05d}", "family": fid, "state": state,
                        "questions": questions, "spec_sha": spec_sha(fam),
                        "slots": {"a": a, "b": b, "c": c}}
