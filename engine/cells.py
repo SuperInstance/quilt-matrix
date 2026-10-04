@@ -81,7 +81,18 @@ def _cf_run(model: str, messages: list[dict], max_tokens: int = 300,
     ok = payload.get("success")
     if not ok:
         raise RuntimeError(f"cf run failed: {json.dumps(payload.get('errors'))[:200]}")
-    return payload["result"]["response"], round((time.monotonic() - t0) * 1000)
+    res = payload["result"]
+    # messages-mode returns OpenAI-style choices; raw-prompt mode returns .response
+    if isinstance(res, dict) and res.get("choices"):
+        text = res["choices"][0]["message"]["content"]
+    elif isinstance(res, dict):
+        text = res.get("response", "")
+    elif isinstance(res, list):  # some models return message-object lists
+        text = " ".join(str(m.get("content", "")) for m in res if isinstance(m, dict))
+    else:
+        text = str(res)
+    routed = (res.get("model") if isinstance(res, dict) else None) or model
+    return text, round((time.monotonic() - t0) * 1000), routed
 
 
 def _groq_run(model: str, messages: list[dict], max_tokens: int = 300,
@@ -115,9 +126,10 @@ def complete(channel: str, messages: list[dict], max_tokens: int = 300,
     """Generic cell completion (runner composes family-specific prompts).
     Returns (text, latency_ms)."""
     if channel == "groq-relay":
-        return _groq_run(model or "llama-3.1-8b-instant", messages, max_tokens, timeout_s)
+        return _groq_run(model or "llama-3.1-8b-instant", messages, max_tokens, timeout_s)[:2]
     if channel == "cf-8b":
-        return _cf_run(model or "@cf/meta/llama-3.1-8b-instruct", messages, max_tokens, timeout_s)
+        return _cf_run(model or "@cf/meta/llama-3.1-8b-instruct",
+                       messages, max_tokens, timeout_s)[:2]
     raise ValueError(f"unknown channel {channel}")
 
 

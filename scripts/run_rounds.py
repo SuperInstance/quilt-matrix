@@ -44,9 +44,9 @@ from engine.music import (MidiWriter, duet_note, jev_melody,     # noqa: E402
 from engine.receipts import Ledger, ScarLog, rewind, snapshot    # noqa: E402
 from questions.build_pool import build_pool, load_index, spec_sha  # noqa: E402
 
-SEED_LEXICON = ["joy", "entropy", "value", "moth", "quilt", "scar", "die",
-                "cell", "bridge", "receipt", "rewind", "song", "echo", "gate",
-                "drift", "dawn", "ledger", "walker", "tide", "spark"]
+SEED_LEXICON = None  # replaced at bootstrap by the FULL index lexicon (48 words):
+# the matrix must know every word the question pool can ask about, otherwise
+# the gate correctly (but uselessly) refuses the whole pool.
 SCORE_NORM = 4.0  # score rubrics are 5 levels → normalize by len-1
 
 
@@ -54,14 +54,17 @@ SCORE_NORM = 4.0  # score rubrics are 5 levels → normalize by len-1
 def bootstrap(matrix: Matrix, run_dir: str) -> None:
     if matrix.nodes:
         return
-    for i, w in enumerate(SEED_LEXICON):
+    lex = load_index()["lexicon"]
+    for i, w in enumerate(lex):
         matrix.add_node(w, joy=0.5 + 0.02 * (i % 5), entropy=0.45 + 0.01 * (i % 7),
                         value=0.5, origin_round=0, created_by="seed",
                         note="lexicon seed row")
     matrix.save()
 
 
-def load_aux(run_dir: str, name: str, cols: list[str]) -> tuple[list[dict], object]:
+def load_aux(run_dir: str, name: str, cols: list[str]):
+    """Returns (rows, writer, file). Caller index pattern: [0] rows (read),
+    [1] writerow, [2] close."""
     path = os.path.join(run_dir, name)
     rows = []
     if os.path.exists(path):
@@ -71,13 +74,12 @@ def load_aux(run_dir: str, name: str, cols: list[str]) -> tuple[list[dict], obje
     writer = csv.DictWriter(f, fieldnames=cols)
     if not rows and f.tell() == 0:
         writer.writeheader()
-    return rows, (writer, f)
+    return rows, writer, f
 
 
-def append_aux(writer_pair, row: dict) -> None:
-    writer, f = writer_pair
-    writer.writerow(row)
-    f.flush()
+def append_aux(slot, row: dict) -> None:
+    slot[1].writerow(row)
+    slot[2].flush()
 
 
 # ──────────────────────────── mechanical gate ────────────────────────────────
@@ -424,7 +426,9 @@ def main() -> int:
           f"nodes={len(matrix.nodes)} edges={len(matrix.edges)} scars={scars.count()}")
 
     for rr in range(args.rounds):
-        round_no = (len(ledger.lines) // 6) + 1
+        # one bounce per round is the round's heartbeat — round number is
+        # derived from it, so resume/rewind stays consistent
+        round_no = ledger.count_kind("jev") + 1
         applied, scarred_this, die_rolls = [], 0, []
         oracle_fails = 0
         indeterminate = 0
@@ -603,8 +607,8 @@ def main() -> int:
                   "applied": sum(1 for _ in ledger.lines if _["kind"] == "mutation"),
                   "scars": scars.count()}, matrix.matrix_hash())
     board.close()
-    for pair in aux.values():
-        pair[1].close()
+    for slot in aux.values():
+        slot[2].close()
     print(f"RUN DONE: ledger={len(ledger.lines)} chain_ok={ledger.verify()[0]} scars={scars.count()}")
     return 0
 

@@ -1,0 +1,4 @@
+{"idx":0,"payload":{"distinct":0.17,"essential":0.04,"parent":"velvet","sub":"Velvet's softness linked to lost socks"},"reason":"decomp-rejected","round":1,"ts":"2026-10-04T02:06:27Z"}
+{"idx":1,"payload":{"a":"bloom","b":"Nexus of Growth","bridges":0.46,"c":""},"reason":"bridge-rejected","round":5,"ts":"2026-10-04T02:06:48Z"}
+{"idx":2,"payload":{"edge":"receipt->acknowledgment:tminus","repairable":0.585,"suspicious":0.73},"reason":"tension-audit","round":7,"ts":"2026-10-04T02:06:51Z"}
+{"idx":3,"payload":{"a":"lattice","b":"rewind","fits":0.4},"reason":"moth-drift-rejected","round":8,"ts":"2026-10-04T02:06:52Z"}
