@@ -66,3 +66,10 @@
 {"idx":65,"payload":{"qid":"GUARD:00632","why":"guard target missing"},"reason":"gate-refused","round":107,"ts":"2026-10-04T03:42:56Z"}
 {"idx":66,"payload":{"qid":"TMSEQ:00500","why":"endpoint not in matrix: thread/Structural Integrity"},"reason":"gate-refused","round":107,"ts":"2026-10-04T03:42:56Z"}
 {"idx":67,"payload":{"qid":"REL-BOND:00079","why":"endpoint not in matrix: t-minus ledger (1)/tide"},"reason":"gate-refused","round":108,"ts":"2026-10-04T03:42:57Z"}
+{"idx":68,"payload":{"qid":"DECOMP:00268","why":"parent missing"},"reason":"gate-refused","round":109,"ts":"2026-10-04T03:43:00Z"}
+{"idx":69,"payload":{"qid":"TENSION:00402","why":"endpoint not in matrix: die/Silhouette Form"},"reason":"gate-refused","round":110,"ts":"2026-10-04T03:43:00Z"}
+{"idx":70,"payload":{"a":"bridge","b":"t-minus","fits":0.28},"reason":"moth-drift-rejected","round":111,"ts":"2026-10-04T03:43:13Z"}
+{"idx":71,"payload":{"qid":"SOUND:00541","why":"guarded node ledger touched without provenance"},"reason":"gate-refused","round":111,"ts":"2026-10-04T03:43:13Z"}
+{"idx":72,"payload":{"qid":"REL-BOND:00024","why":"endpoint not in matrix: Silhouette Form/slackwater"},"reason":"gate-refused","round":113,"ts":"2026-10-04T03:43:16Z"}
+{"idx":73,"payload":{"distinct":0.38,"essential":0.07,"parent":"knot","sub":"Joy echoes entropy"},"reason":"decomp-rejected","round":114,"ts":"2026-10-04T03:43:18Z"}
+{"idx":74,"payload":{"qid":"ECHO:00696","why":"endpoint not in matrix: Harmonic overlap/Mitosis"},"reason":"gate-refused","round":114,"ts":"2026-10-04T03:43:18Z"}

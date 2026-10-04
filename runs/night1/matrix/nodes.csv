@@ -67,6 +67,7 @@ quilting-stitches-on-a-dying-fabric,Quilting stitches on a dying fabric,0.51,0.5
 random-pattern,Random Pattern,0.5,0.5,0.5,14,cell+oracle,tminus stage of value
 receipt,receipt,0.5,0.48,0.5,0,seed,lexicon seed row
 receipt-loops-back-to-accounting,Receipt loops back to accounting,0.65,0.5,0.47,0,weave:runs/night3,bridge receipt<->loop
+reflects-arrow,reflects arrow,0.63,0.5,0.595,113,cell+oracle,bridge arrow<->mirror
 resonance,resonance,0.54,0.51,0.5,0,seed,lexicon seed row
 resonant-frequency,Resonant frequency,0.776,0.5,0.94,72,cell+oracle,decomp of resonance
 resonates,resonates,0.5,0.5,0.5,93,cell+oracle,tminus stage of echo
