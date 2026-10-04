@@ -22,3 +22,5 @@
 {"idx":21,"payload":{"family":"DECOMP","qid":"DECOMP:00293"},"reason":"cell-indeterminate","round":42,"ts":"2026-10-04T03:32:19Z"}
 {"idx":22,"payload":{"a":"jam","b":"cell","bridges":0.33,"c":"Molecular Link"},"reason":"bridge-rejected","round":47,"ts":"2026-10-04T03:32:36Z"}
 {"idx":23,"payload":{"distinct":0.45,"essential":0.5,"parent":"lattice","sub":"Lattice of Connections"},"reason":"decomp-rejected","round":48,"ts":"2026-10-04T03:32:38Z"}
+{"idx":24,"payload":{"a":"t-minus","b":"tide","fits":0.25},"reason":"moth-drift-rejected","round":50,"ts":"2026-10-04T03:32:54Z"}
+{"idx":25,"payload":{"a":"lattice","b":"entropy","fits":0.24},"reason":"moth-drift-rejected","round":56,"ts":"2026-10-04T03:33:18Z"}
