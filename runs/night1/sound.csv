@@ -9,3 +9,5 @@ cluster,mode,brightness,density,velocity,round
 "[""echo"", ""entropy""]",minor,0.27,0.17,0.282,43
 "[""dawn-chorus"", ""song""]",major,0.782,0.135,0.333,48
 "[""drum"", ""velvet""]",minor,0.28,0.087,0.42,50
+"[""dusk"", ""knot""]",minor,0.24,0.515,0.228,54
+"[""ember"", ""tension""]",phrygian,0.378,0.198,0.685,59

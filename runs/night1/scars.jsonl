@@ -22,3 +22,7 @@
 {"idx":21,"payload":{"a":"receipt","b":"bridge","bridges":0.47,"c":"Receipt Bridge: Acknowledgment as Toll"},"reason":"bridge-rejected","round":49,"ts":"2026-10-04T02:08:26Z"}
 {"idx":22,"payload":{"qid":"TMSEQ:00432","why":"endpoint not in matrix: Eyewitness account/ledger"},"reason":"gate-refused","round":51,"ts":"2026-10-04T02:09:26Z"}
 {"idx":23,"payload":{"distinct":0.54,"essential":0.39,"parent":"rewind","sub":"Rewinding as data reset"},"reason":"decomp-rejected","round":52,"ts":"2026-10-04T02:09:29Z"}
+{"idx":24,"payload":{"qid":"GUARD:00619","why":"guard target missing"},"reason":"gate-refused","round":55,"ts":"2026-10-04T02:23:17Z"}
+{"idx":25,"payload":{"family":"TMSEQ","qid":"TMSEQ:00494"},"reason":"cell-indeterminate","round":55,"ts":"2026-10-04T02:23:18Z"}
+{"idx":26,"payload":{"distinct":0.32,"essential":0.04,"parent":"receipt","sub":"Receipt is a subliminal warning"},"reason":"decomp-rejected","round":57,"ts":"2026-10-04T02:23:21Z"}
+{"idx":27,"payload":{"qid":"PLAY:00738","why":"endpoint not in matrix: Static Electricity Attracts Dust/slackwater"},"reason":"gate-refused","round":58,"ts":"2026-10-04T02:23:22Z"}
