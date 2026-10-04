@@ -8,3 +8,4 @@ cluster,mode,brightness,density,velocity,round
 "[""shadow"", ""oracle""]",minor,0.235,0.17,0.217,38
 "[""echo"", ""entropy""]",minor,0.27,0.17,0.282,43
 "[""dawn-chorus"", ""song""]",major,0.782,0.135,0.333,48
+"[""drum"", ""velvet""]",minor,0.28,0.087,0.42,50

@@ -19,3 +19,6 @@
 {"idx":18,"payload":{"family":"TMSEQ","qid":"TMSEQ:00419"},"reason":"cell-indeterminate","round":44,"ts":"2026-10-04T02:08:16Z"}
 {"idx":19,"payload":{"distinct":0.39,"essential":0.07,"parent":"mirror","sub":"Entropy mirrors joy in ledger"},"reason":"decomp-rejected","round":45,"ts":"2026-10-04T02:08:19Z"}
 {"idx":20,"payload":{"a":"tide","b":"moth","fits":0.35},"reason":"moth-drift-rejected","round":47,"ts":"2026-10-04T02:08:20Z"}
+{"idx":21,"payload":{"a":"receipt","b":"bridge","bridges":0.47,"c":"Receipt Bridge: Acknowledgment as Toll"},"reason":"bridge-rejected","round":49,"ts":"2026-10-04T02:08:26Z"}
+{"idx":22,"payload":{"qid":"TMSEQ:00432","why":"endpoint not in matrix: Eyewitness account/ledger"},"reason":"gate-refused","round":51,"ts":"2026-10-04T02:09:26Z"}
+{"idx":23,"payload":{"distinct":0.54,"essential":0.39,"parent":"rewind","sub":"Rewinding as data reset"},"reason":"decomp-rejected","round":52,"ts":"2026-10-04T02:09:29Z"}
