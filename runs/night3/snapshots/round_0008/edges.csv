@@ -1,0 +1,5 @@
+edge_id,src,dst,rel_type,joy,entropy,value,origin_round,created_by,question_id,note
+blank-space->bridge-to-song:tminus,blank-space,bridge-to-song,tminus,0.82,0.18000000000000005,0.8,5,oracle,TMSEQ:00442,
+bouncer->loop:resonates,bouncer,loop,resonates,0.5664869648,0.27,0.37750000000000006,6,oracle,REL-BOND:00059,
+ember->dawn-chorus:resonates,ember,dawn-chorus,resonates,0.5700000000000001,0.16000000000000003,0.792,1,oracle,ECHO:00616,
+tension->loop:resonates,tension,loop,resonates,0.5630179999999999,0.15000000000000002,0.775,7,oracle,ECHO:00643,
