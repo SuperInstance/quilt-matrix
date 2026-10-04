@@ -52,3 +52,15 @@
 {"idx":51,"payload":{"qid":"ECHO:00660","why":"endpoint not in matrix: joy/Darkness as absence of light"},"reason":"gate-refused","round":115,"ts":"2026-10-04T03:41:02Z"}
 {"idx":52,"payload":{"edge":"knot->scar:resonates","repairable":0.51,"suspicious":0.71},"reason":"tension-audit","round":115,"ts":"2026-10-04T03:41:03Z"}
 {"idx":53,"payload":{"a":"t-minus 3","b":"knot","fits":0.35},"reason":"moth-drift-rejected","round":116,"ts":"2026-10-04T03:41:16Z"}
+{"idx":54,"payload":{"qid":"TMSEQ:00439","why":"endpoint not in matrix: entropy/Darkness as absence of light"},"reason":"gate-refused","round":118,"ts":"2026-10-04T03:41:19Z"}
+{"idx":55,"payload":{"qid":"TENSION:00415","why":"endpoint not in matrix: tide/t-minus 3"},"reason":"gate-refused","round":120,"ts":"2026-10-04T03:41:22Z"}
+{"idx":56,"payload":{"qid":"PLAY:00713","why":"guarded node ledger touched without provenance"},"reason":"gate-refused","round":121,"ts":"2026-10-04T03:41:22Z"}
+{"idx":57,"payload":{"a":"garden","b":"value","fits":0.4},"reason":"moth-drift-rejected","round":121,"ts":"2026-10-04T03:41:36Z"}
+{"idx":58,"payload":{"qid":"TMSEQ:00456","why":"endpoint not in matrix: rewind/t-minus 3"},"reason":"gate-refused","round":123,"ts":"2026-10-04T03:41:36Z"}
+{"idx":59,"payload":{"a":"drift","b":"die","bridges":0.44,"c":"Loss Drifts to Death"},"reason":"bridge-rejected","round":123,"ts":"2026-10-04T03:41:38Z"}
+{"idx":60,"payload":{"qid":"REL-BOND:00163","why":"endpoint not in matrix: entropy/t-minus 3"},"reason":"gate-refused","round":124,"ts":"2026-10-04T03:41:38Z"}
+{"idx":61,"payload":{"distinct":0.73,"essential":0.23,"parent":"gate","sub":"Quantum Entanglement Gate"},"reason":"decomp-rejected","round":124,"ts":"2026-10-04T03:41:39Z"}
+{"idx":62,"payload":{"a":"surface","b":"loop","fits":0.35},"reason":"moth-drift-rejected","round":126,"ts":"2026-10-04T03:41:53Z"}
+{"idx":63,"payload":{"qid":"SOUND:00477","why":"endpoint not in matrix: Rhythmic Patterns/ledger"},"reason":"gate-refused","round":127,"ts":"2026-10-04T03:41:53Z"}
+{"idx":64,"payload":{"qid":"TMSEQ:00466","why":"endpoint not in matrix: t-minus 3/walker"},"reason":"gate-refused","round":128,"ts":"2026-10-04T03:41:53Z"}
+{"idx":65,"payload":{"distinct":0.16,"essential":0.05,"parent":"jam","sub":"Flower petals jam is a pastry"},"reason":"decomp-rejected","round":129,"ts":"2026-10-04T03:41:56Z"}

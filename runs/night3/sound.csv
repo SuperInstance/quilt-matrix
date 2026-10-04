@@ -19,3 +19,4 @@ cluster,mode,brightness,density,velocity,round
 "[""surface"", ""loop""]",mixolydian,0.497,0.113,0.223,107
 "[""drift"", ""loop""]",lydian,0.412,0.138,0.39,112
 "[""bridge"", ""loop""]",lydian,0.5,0.155,0.212,117
+"[""mirror"", ""velvet""]",minor,0.398,0.133,0.22,122

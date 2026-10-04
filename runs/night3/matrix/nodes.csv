@@ -12,6 +12,7 @@ cell,cell,0.54,0.45,0.5,0,seed,lexicon seed row
 darkness-as-absence-of-light,Darkness as absence of light,0.7240000000000001,0.5,0.81,89,cell+oracle,decomp of shadow
 dawn,dawn,0.5,0.51,0.5,0,seed,lexicon seed row
 dawn-chorus,dawn-chorus,0.54,0.47000000000000003,0.5,0,seed,lexicon seed row
+dawn-s-warmth-awakens-the-field,Dawn's warmth awakens the field,0.8,0.5,0.5675,118,cell+oracle,bridge dawn<->field
 die,die,0.52,0.51,0.5,0,seed,lexicon seed row
 dotted-line,Dotted Line,0.5,0.5,0.5,22,cell+oracle,tminus stage of gate
 drift,drift,0.56,0.49,0.5,0,seed,lexicon seed row
@@ -20,6 +21,7 @@ dusk,dusk,0.56,0.48,0.5,0,seed,lexicon seed row
 echo,echo,0.58,0.45,0.5,0,seed,lexicon seed row
 ember,ember,0.52,0.49,0.5,0,seed,lexicon seed row
 entropy,entropy,0.52,0.46,0.5,0,seed,lexicon seed row
+fades-to-decay,Fades to decay,0.71,0.5,0.615,128,cell+oracle,bridge drift<->die
 field,field,0.56,0.47000000000000003,0.5,0,seed,lexicon seed row
 garden,garden,0.58,0.51,0.5,0,seed,lexicon seed row
 gate,gate,0.5,0.46,0.5,0,seed,lexicon seed row
@@ -51,6 +53,7 @@ slackwater,slackwater,0.5,0.47000000000000003,0.5,0,seed,lexicon seed row
 song,song,0.54,0.5,0.5,0,seed,lexicon seed row
 spark,spark,0.5,0.48,0.5,0,seed,lexicon seed row
 static,static,0.56,0.51,0.5,0,seed,lexicon seed row
+structural-integrity,Structural Integrity,0.784,0.5,0.96,119,cell+oracle,decomp of bridge
 surface,surface,0.58,0.47000000000000003,0.5,0,seed,lexicon seed row
 t-minus,t-minus,0.58,0.5,0.5,0,seed,lexicon seed row
 t-minus-2,t-minus 2,0.5,0.5,0.5,11,cell+oracle,tminus stage of wave
