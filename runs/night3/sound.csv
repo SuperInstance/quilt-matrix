@@ -22,3 +22,4 @@ cluster,mode,brightness,density,velocity,round
 "[""mirror"", ""velvet""]",minor,0.398,0.133,0.22,122
 "[""plainsong"", ""velvet""]",dorian,0.29,0.138,0.145,132
 "[""thread"", ""surface""]",lydian,0.49,0.085,0.163,135
+"[""jam"", ""resonance""]",lydian,0.62,0.14,0.323,140
