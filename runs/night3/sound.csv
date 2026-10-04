@@ -16,3 +16,6 @@ cluster,mode,brightness,density,velocity,round
 "[""dusk"", ""knot""]",minor,0.237,0.565,0.225,88
 "[""resonance"", ""entropy""]",lydian,0.463,0.223,0.26,91
 "[""value"", ""quilt""]",pentatonic,0.6,0.092,0.18,96
+"[""surface"", ""loop""]",mixolydian,0.497,0.113,0.223,107
+"[""drift"", ""loop""]",lydian,0.412,0.138,0.39,112
+"[""bridge"", ""loop""]",lydian,0.5,0.155,0.212,117

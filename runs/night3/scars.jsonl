@@ -42,3 +42,13 @@
 {"idx":41,"payload":{"distinct":0.4,"essential":0.15,"parent":"knot","sub":"Tangled harmonics"},"reason":"decomp-rejected","round":99,"ts":"2026-10-04T03:39:11Z"}
 {"idx":42,"payload":{"qid":"GUARD:00579","why":"guard target missing"},"reason":"gate-refused","round":99,"ts":"2026-10-04T03:39:11Z"}
 {"idx":43,"payload":{"qid":"SOUND:00472","why":"endpoint not in matrix: Receipt loops back to accounting/scar"},"reason":"gate-refused","round":101,"ts":"2026-10-04T03:39:12Z"}
+{"idx":44,"payload":{"distinct":0.2,"essential":0.07,"parent":"ledger","sub":"ledger is a harmonic series"},"reason":"decomp-rejected","round":104,"ts":"2026-10-04T03:39:17Z"}
+{"idx":45,"payload":{"qid":"TENSION:00417","why":"endpoint not in matrix: wire/t-minus 3"},"reason":"gate-refused","round":105,"ts":"2026-10-04T03:39:18Z"}
+{"idx":46,"payload":{"qid":"SOUND:00497","why":"guarded node ledger touched without provenance"},"reason":"gate-refused","round":106,"ts":"2026-10-04T03:39:18Z"}
+{"idx":47,"payload":{"qid":"TMSEQ:00466","why":"endpoint not in matrix: t-minus 3/walker"},"reason":"gate-refused","round":108,"ts":"2026-10-04T03:40:39Z"}
+{"idx":48,"payload":{"qid":"GUARD:00627","why":"guard target missing"},"reason":"gate-refused","round":112,"ts":"2026-10-04T03:40:57Z"}
+{"idx":49,"payload":{"a":"cell","b":"shadow","bridges":0.22,"c":"syncs with resonance"},"reason":"bridge-rejected","round":113,"ts":"2026-10-04T03:41:01Z"}
+{"idx":50,"payload":{"distinct":0.36,"essential":0.81,"parent":"plainsong","sub":"Medieval Chant Heritage"},"reason":"decomp-rejected","round":114,"ts":"2026-10-04T03:41:02Z"}
+{"idx":51,"payload":{"qid":"ECHO:00660","why":"endpoint not in matrix: joy/Darkness as absence of light"},"reason":"gate-refused","round":115,"ts":"2026-10-04T03:41:02Z"}
+{"idx":52,"payload":{"edge":"knot->scar:resonates","repairable":0.51,"suspicious":0.71},"reason":"tension-audit","round":115,"ts":"2026-10-04T03:41:03Z"}
+{"idx":53,"payload":{"a":"t-minus 3","b":"knot","fits":0.35},"reason":"moth-drift-rejected","round":116,"ts":"2026-10-04T03:41:16Z"}
