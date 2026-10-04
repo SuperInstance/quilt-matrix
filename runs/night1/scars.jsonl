@@ -13,3 +13,6 @@
 {"idx":12,"payload":{"a":"rewind","b":"value","bridges":0.48,"c":"Rewinding is priceless"},"reason":"bridge-rejected","round":29,"ts":"2026-10-04T02:07:54Z"}
 {"idx":13,"payload":{"edge":"cell->ember:echoes","repairable":0.4625,"suspicious":0.73},"reason":"tension-audit","round":31,"ts":"2026-10-04T02:07:56Z"}
 {"idx":14,"payload":{"a":"wire","b":"tide","fits":0.39},"reason":"moth-drift-rejected","round":32,"ts":"2026-10-04T02:07:57Z"}
+{"idx":15,"payload":{"distinct":0.56,"essential":0.31,"parent":"joy","sub":"Happiness Spreads"},"reason":"decomp-rejected","round":35,"ts":"2026-10-04T02:08:05Z"}
+{"idx":16,"payload":{"a":"velvet","b":"arrow","bridges":0.44,"c":"Silken threads bind dawn's arrow"},"reason":"bridge-rejected","round":39,"ts":"2026-10-04T02:08:09Z"}
+{"idx":17,"payload":{"distinct":0.61,"essential":0.19,"parent":"gate","sub":"Gate Theory"},"reason":"decomp-rejected","round":40,"ts":"2026-10-04T02:08:11Z"}
