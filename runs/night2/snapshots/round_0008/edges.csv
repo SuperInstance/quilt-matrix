@@ -1,0 +1,9 @@
+edge_id,src,dst,rel_type,joy,entropy,value,origin_round,created_by,question_id,note
+drift->dusk:echoes,drift,dusk,echoes,0.58,0.75,0.3,3,moth,MOTHDRIFT:00514,moth-drift
+drift->rewind:resonates,drift,rewind,resonates,0.48,0.26,0.722,7,oracle,ECHO:00612,
+ember->tension:resonates,ember,tension,resonates,0.63,0.17999999999999994,0.746,2,oracle,ECHO:00616,
+field->field-theory:feeds,field,field-theory,feeds,0.52,0.48,0.54,1,oracle,DECOMP:00275,
+init->prep:tminus,init,prep,tminus,0.8,0.19999999999999996,0.8,5,oracle,TMSEQ:00430,
+shadow->walker:resonates,shadow,walker,resonates,0.6899551666976,0.24,0.6900000000000001,1,oracle,REL-BOND:00004,
+velvet->witness:echoes,velvet,witness,echoes,0.46,0.28,0.1975,6,oracle,REL-BOND:00104,
+wire->shadow:echoes,wire,shadow,echoes,0.47,0.75,0.3,8,moth,MOTHDRIFT:00552,moth-drift

@@ -1,0 +1,53 @@
+id,label,joy,entropy,value,origin_round,created_by,note
+arrow,arrow,0.54,0.45,0.5,0,seed,lexicon seed row
+bloom,bloom,0.54,0.48,0.5,0,seed,lexicon seed row
+bouncer,bouncer,0.54,0.49,0.5,0,seed,lexicon seed row
+bridge,bridge,0.56,0.46,0.5,0,seed,lexicon seed row
+cadence,cadence,0.5,0.49,0.5,0,seed,lexicon seed row
+cell,cell,0.54,0.45,0.5,0,seed,lexicon seed row
+dawn,dawn,0.5,0.51,0.5,0,seed,lexicon seed row
+dawn-chorus,dawn-chorus,0.54,0.47000000000000003,0.5,0,seed,lexicon seed row
+die,die,0.52,0.51,0.5,0,seed,lexicon seed row
+drift,drift,0.56,0.49,0.5,0,seed,lexicon seed row
+drum,drum,0.56,0.51,0.5,0,seed,lexicon seed row
+dusk,dusk,0.56,0.48,0.5,0,seed,lexicon seed row
+echo,echo,0.58,0.45,0.5,0,seed,lexicon seed row
+ember,ember,0.52,0.49,0.5,0,seed,lexicon seed row
+entropy,entropy,0.52,0.46,0.5,0,seed,lexicon seed row
+field,field,0.56,0.47000000000000003,0.5,0,seed,lexicon seed row
+field-theory,Field Theory,0.6080000000000001,0.5,0.52,1,cell+oracle,decomp of field
+garden,garden,0.58,0.51,0.5,0,seed,lexicon seed row
+gate,gate,0.5,0.46,0.5,0,seed,lexicon seed row
+init,init,0.5,0.5,0.5,5,cell+oracle,tminus stage of loop
+jam,jam,0.56,0.45,0.5,0,seed,lexicon seed row
+joy,joy,0.5,0.45,0.5,0,seed,lexicon seed row
+knot,knot,0.5,0.5,0.5,0,seed,lexicon seed row
+lattice,lattice,0.58,0.48,0.5,0,seed,lexicon seed row
+ledger,ledger,0.52,0.45,0.5,0,seed,lexicon seed row
+loop,loop,0.52,0.51,0.5,0,seed,lexicon seed row
+mirror,mirror,0.56,0.46,0.5,0,seed,lexicon seed row
+moth,moth,0.56,0.48,0.5,0,seed,lexicon seed row
+oracle,oracle,0.52,0.48,0.5,0,seed,lexicon seed row
+plainsong,plainsong,0.58,0.46,0.5,0,seed,lexicon seed row
+prep,prep,0.5,0.5,0.5,5,cell+oracle,tminus stage of loop
+quilt,quilt,0.58,0.49,0.5,0,seed,lexicon seed row
+receipt,receipt,0.5,0.48,0.5,0,seed,lexicon seed row
+resonance,resonance,0.54,0.51,0.5,0,seed,lexicon seed row
+rewind,rewind,0.52,0.49,0.5,0,seed,lexicon seed row
+scar,scar,0.5,0.5,0.5,0,seed,lexicon seed row
+shadow,shadow,0.58,0.47000000000000003,0.5,0,seed,lexicon seed row
+slackwater,slackwater,0.5,0.47000000000000003,0.5,0,seed,lexicon seed row
+song,song,0.54,0.5,0.5,0,seed,lexicon seed row
+spark,spark,0.5,0.48,0.5,0,seed,lexicon seed row
+static,static,0.56,0.51,0.5,0,seed,lexicon seed row
+surface,surface,0.58,0.47000000000000003,0.5,0,seed,lexicon seed row
+t-minus,t-minus,0.58,0.5,0.5,0,seed,lexicon seed row
+tension,tension,0.52,0.5,0.5,0,seed,lexicon seed row
+thread,thread,0.58,0.49,0.5,0,seed,lexicon seed row
+tide,tide,0.5,0.45,0.5,0,seed,lexicon seed row
+value,value,0.54,0.47000000000000003,0.5,0,seed,lexicon seed row
+velvet,velvet,0.54,0.5,0.5,0,seed,lexicon seed row
+walker,walker,0.56,0.5,0.5,0,seed,lexicon seed row
+wave,wave,0.52,0.46,0.5,0,seed,lexicon seed row
+wire,wire,0.52,0.47000000000000003,0.5,0,seed,lexicon seed row
+witness,witness,0.54,0.46,0.5,0,seed,lexicon seed row

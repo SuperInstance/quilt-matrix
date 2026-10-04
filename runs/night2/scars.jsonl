@@ -1,0 +1,19 @@
+{"idx":0,"payload":{"a":"dawn-chorus","b":"value","bridges":0.48,"c":"Avian melodies influence economic value"},"reason":"bridge-rejected","round":5,"ts":"2026-10-04T02:16:26Z"}
+{"idx":1,"payload":{"distinct":0.48,"essential":0.74,"parent":"dawn","sub":"New Beginnings"},"reason":"decomp-rejected","round":6,"ts":"2026-10-04T02:16:28Z"}
+{"idx":2,"payload":{"edge":"velvet->witness:echoes","repairable":0.4075,"suspicious":0.78},"reason":"tension-audit","round":7,"ts":"2026-10-04T02:16:28Z"}
+{"idx":3,"payload":{"distinct":0.75,"essential":0.23,"parent":"receipt","sub":"Invoices"},"reason":"decomp-rejected","round":11,"ts":"2026-10-04T02:16:34Z"}
+{"idx":4,"payload":{"a":"ledger","b":"dusk","bridges":0.37,"c":"Dusk ledger entry is a cryptic map"},"reason":"bridge-rejected","round":15,"ts":"2026-10-04T02:16:38Z"}
+{"idx":5,"payload":{"distinct":0.82,"essential":0.19,"parent":"arrow","sub":"Arrow of Time"},"reason":"decomp-rejected","round":16,"ts":"2026-10-04T02:16:41Z"}
+{"idx":6,"payload":{"a":"cadence","b":"value","bridges":0.37,"c":"Rhythm of Worth"},"reason":"bridge-rejected","round":20,"ts":"2026-10-04T02:16:45Z"}
+{"idx":7,"payload":{"family":"DECOMP","qid":"DECOMP:00271"},"reason":"cell-indeterminate","round":21,"ts":"2026-10-04T02:16:47Z"}
+{"idx":8,"payload":{"a":"arrow","b":"velvet","fits":0.37},"reason":"moth-drift-rejected","round":23,"ts":"2026-10-04T02:16:48Z"}
+{"idx":9,"payload":{"family":"DECOMP","qid":"DECOMP:00275"},"reason":"cell-indeterminate","round":26,"ts":"2026-10-04T02:16:53Z"}
+{"idx":10,"payload":{"edge":"knot->quilt:echoes","repairable":0.38,"suspicious":0.79},"reason":"tension-audit","round":27,"ts":"2026-10-04T02:16:53Z"}
+{"idx":11,"payload":{"a":"bloom","b":"thread","bridges":0.43,"c":"Interweave Fibers"},"reason":"bridge-rejected","round":30,"ts":"2026-10-04T02:16:58Z"}
+{"idx":12,"payload":{"distinct":0.47,"essential":0.4,"parent":"oracle","sub":"Augur's Hidden Prophecy"},"reason":"decomp-rejected","round":31,"ts":"2026-10-04T02:17:00Z"}
+{"idx":13,"payload":{"family":"TMSEQ","qid":"TMSEQ:00426"},"reason":"cell-indeterminate","round":35,"ts":"2026-10-04T02:17:02Z"}
+{"idx":14,"payload":{"a":"quilt","b":"bouncer","bridges":0.38,"c":"Sewn Safety Net"},"reason":"bridge-rejected","round":35,"ts":"2026-10-04T02:17:04Z"}
+{"idx":15,"payload":{"family":"DECOMP","qid":"DECOMP:00287"},"reason":"cell-indeterminate","round":36,"ts":"2026-10-04T02:17:05Z"}
+{"idx":16,"payload":{"edge":"scar->dawn-chorus:echoes","repairable":0.4125,"suspicious":0.72},"reason":"tension-audit","round":37,"ts":"2026-10-04T02:17:06Z"}
+{"idx":17,"payload":{"a":"bouncer","b":"dawn","fits":0.38},"reason":"moth-drift-rejected","round":38,"ts":"2026-10-04T02:17:06Z"}
+{"idx":18,"payload":{"a":"loop","b":"drum","bridges":0.5,"c":"Resonant Loop Drum"},"reason":"bridge-rejected","round":40,"ts":"2026-10-04T02:17:09Z"}
