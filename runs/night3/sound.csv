@@ -8,3 +8,5 @@ cluster,mode,brightness,density,velocity,round
 "[""thread"", ""dawn""]",lydian,0.71,0.092,0.275,39
 "[""shadow"", ""scar""]",minor,0.165,0.152,0.255,45
 "[""oracle"", ""garden""]",lydian,0.645,0.128,0.19,51
+"[""gate"", ""garden""]",pentatonic,0.618,0.11,0.175,61
+"[""wire"", ""velvet""]",minor,0.388,0.128,0.245,67

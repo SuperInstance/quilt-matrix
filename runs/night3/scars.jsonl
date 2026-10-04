@@ -27,3 +27,8 @@
 {"idx":26,"payload":{"qid":"SOUND:00505","why":"endpoint not in matrix: t-minus 3/oracle"},"reason":"gate-refused","round":57,"ts":"2026-10-04T03:33:20Z"}
 {"idx":27,"payload":{"family":"TMSEQ","qid":"TMSEQ:00458"},"reason":"cell-indeterminate","round":58,"ts":"2026-10-04T03:33:21Z"}
 {"idx":28,"payload":{"distinct":0.5,"essential":0.14,"parent":"tension","sub":"cellular entropy"},"reason":"decomp-rejected","round":59,"ts":"2026-10-04T03:36:08Z"}
+{"idx":29,"payload":{"a":"entropy","b":"t-minus","fits":0.29},"reason":"moth-drift-rejected","round":62,"ts":"2026-10-04T03:36:25Z"}
+{"idx":30,"payload":{"qid":"GUARD:00614","why":"guard target missing"},"reason":"gate-refused","round":64,"ts":"2026-10-04T03:36:26Z"}
+{"idx":31,"payload":{"distinct":0.44,"essential":0.1,"parent":"thread","sub":"Echoes resonate in entropy's value"},"reason":"decomp-rejected","round":65,"ts":"2026-10-04T03:36:27Z"}
+{"idx":32,"payload":{"a":"spark","b":"dawn-chorus","fits":0.34},"reason":"moth-drift-rejected","round":68,"ts":"2026-10-04T03:36:41Z"}
+{"idx":33,"payload":{"distinct":0.57,"essential":0.44,"parent":"spark","sub":"Innovation Catalyst"},"reason":"decomp-rejected","round":71,"ts":"2026-10-04T03:36:44Z"}
