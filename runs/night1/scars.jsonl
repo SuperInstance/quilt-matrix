@@ -8,3 +8,8 @@
 {"idx":7,"payload":{"family":"DECOMP","qid":"DECOMP:00286"},"reason":"cell-indeterminate","round":20,"ts":"2026-10-04T02:07:42Z"}
 {"idx":8,"payload":{"a":"ledger","b":"die","fits":0.37},"reason":"moth-drift-rejected","round":22,"ts":"2026-10-04T02:07:42Z"}
 {"idx":9,"payload":{"a":"cell","b":"jam","bridges":0.21,"c":"cellular division jams"},"reason":"bridge-rejected","round":24,"ts":"2026-10-04T02:07:46Z"}
+{"idx":10,"payload":{"a":"lattice","b":"Acknowledgment","fits":0.37},"reason":"moth-drift-rejected","round":27,"ts":"2026-10-04T02:07:51Z"}
+{"idx":11,"payload":{"family":"TMSEQ","qid":"TMSEQ:00428"},"reason":"cell-indeterminate","round":29,"ts":"2026-10-04T02:07:53Z"}
+{"idx":12,"payload":{"a":"rewind","b":"value","bridges":0.48,"c":"Rewinding is priceless"},"reason":"bridge-rejected","round":29,"ts":"2026-10-04T02:07:54Z"}
+{"idx":13,"payload":{"edge":"cell->ember:echoes","repairable":0.4625,"suspicious":0.73},"reason":"tension-audit","round":31,"ts":"2026-10-04T02:07:56Z"}
+{"idx":14,"payload":{"a":"wire","b":"tide","fits":0.39},"reason":"moth-drift-rejected","round":32,"ts":"2026-10-04T02:07:57Z"}
