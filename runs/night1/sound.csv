@@ -6,3 +6,5 @@ cluster,mode,brightness,density,velocity,round
 "[""t-minus"", ""slackwater""]",minor,0.385,0.15,0.228,28
 "[""drum"", ""plainsong""]",dorian,0.39,0.1,0.375,33
 "[""shadow"", ""oracle""]",minor,0.235,0.17,0.217,38
+"[""echo"", ""entropy""]",minor,0.27,0.17,0.282,43
+"[""dawn-chorus"", ""song""]",major,0.782,0.135,0.333,48

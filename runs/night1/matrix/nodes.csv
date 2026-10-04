@@ -31,6 +31,7 @@ loop,loop,0.52,0.51,0.5,0,seed,lexicon seed row
 mirror,mirror,0.56,0.46,0.5,0,seed,lexicon seed row
 mitosis,Mitosis,0.732,0.5,0.83,10,cell+oracle,decomp of cell
 moth,moth,0.56,0.48,0.5,0,seed,lexicon seed row
+moth-s-wings-drift-like-snow,Moth's Wings Drift Like Snow,0.75,0.5,0.5875,44,cell+oracle,bridge moth<->drift
 oracle,oracle,0.52,0.48,0.5,0,seed,lexicon seed row
 oscillates,oscillates,0.59,0.5,0.3775,34,cell+oracle,bridge tide<->cell
 plainsong,plainsong,0.58,0.46,0.5,0,seed,lexicon seed row
