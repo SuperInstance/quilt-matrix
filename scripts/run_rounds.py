@@ -489,6 +489,11 @@ def main() -> int:
             if fam_id == "MOTHDRIFT" and not args.no_moth:
                 hx = moth.quantum_bytes(4)
                 if hx:
+                    # receipt the certified randomness itself (SP 800-90B +
+                    # CHSH witness come from comet-qrng-v1's result payload)
+                    ledger.append("moth-entropy", round_no,
+                                  {"hex": hx, "source": "comet-qrng-v1",
+                                   "use": "candidate-pick+entropy"}, mhash)
                     lex = json.load(open(os.path.join(HERE, "questions", "index.json")))["lexicon"]
                     a_lbl = row["slots"]["a"]
                     b_lbl = lex[int(hx, 16) % len(lex)]

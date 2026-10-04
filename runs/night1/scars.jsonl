@@ -31,3 +31,35 @@
 {"idx":30,"payload":{"distinct":0.64,"essential":0.28,"parent":"gate","sub":"Gate Control Hierarchy"},"reason":"decomp-rejected","round":67,"ts":"2026-10-04T02:23:36Z"}
 {"idx":31,"payload":{"a":"Static Electricity Attracts Dust","b":"loop","fits":0.29},"reason":"moth-drift-rejected","round":69,"ts":"2026-10-04T02:23:36Z"}
 {"idx":32,"payload":{"a":"dawn-chorus","b":"Quantum Fluctuation","bridges":0.24,"c":"Echoes of Dawn in Quantum Foam"},"reason":"bridge-rejected","round":71,"ts":"2026-10-04T02:23:40Z"}
+{"idx":33,"payload":{"a":"tide","b":"Sketch","fits":0.39},"reason":"moth-drift-rejected","round":74,"ts":"2026-10-04T02:23:45Z"}
+{"idx":34,"payload":{"qid":"GUARD:00614","why":"guard target missing"},"reason":"gate-refused","round":75,"ts":"2026-10-04T02:23:45Z"}
+{"idx":35,"payload":{"qid":"TMSEQ:00442","why":"endpoint not in matrix: Sketch/cell"},"reason":"gate-refused","round":75,"ts":"2026-10-04T02:23:45Z"}
+{"idx":36,"payload":{"a":"t-minus","b":"Quantum Fluctuation","bridges":0.15,"c":"Quantum Entanglement Bridge"},"reason":"bridge-rejected","round":76,"ts":"2026-10-04T02:23:46Z"}
+{"idx":37,"payload":{"a":"quilt","b":"drift","fits":0.39},"reason":"moth-drift-rejected","round":78,"ts":"2026-10-04T02:28:47Z"}
+{"idx":38,"payload":{"qid":"SOUND:00505","why":"endpoint not in matrix: Static Electricity Attracts Dust/t-minus"},"reason":"gate-refused","round":78,"ts":"2026-10-04T02:28:47Z"}
+{"idx":39,"payload":{"a":"scar","b":"bouncer","bridges":0.47,"c":"Bouncer's scars reveal hidden echoes"},"reason":"bridge-rejected","round":80,"ts":"2026-10-04T02:28:51Z"}
+{"idx":40,"payload":{"qid":"REL-BOND:00049","why":"endpoint not in matrix: Mitosis/oracle"},"reason":"gate-refused","round":80,"ts":"2026-10-04T02:28:51Z"}
+{"idx":41,"payload":{"distinct":0.56,"essential":0.1,"parent":"bridge","sub":"Quantum Resonance Bridge"},"reason":"decomp-rejected","round":81,"ts":"2026-10-04T02:28:53Z"}
+{"idx":42,"payload":{"a":"rewind","b":"quilt","fits":0.38},"reason":"moth-drift-rejected","round":83,"ts":"2026-10-04T02:29:04Z"}
+{"idx":43,"payload":{"qid":"SOUND:00528","why":"endpoint not in matrix: knot/Silhouette Form"},"reason":"gate-refused","round":83,"ts":"2026-10-04T02:29:04Z"}
+{"idx":44,"payload":{"qid":"GUARD:00620","why":"guard target missing"},"reason":"gate-refused","round":84,"ts":"2026-10-04T02:29:04Z"}
+{"idx":45,"payload":{"a":"moth","b":"Static Electricity Attracts Dust","bridges":0.37,"c":"Moths' Whiskers Detect Electrical Charge"},"reason":"bridge-rejected","round":85,"ts":"2026-10-04T02:29:07Z"}
+{"idx":46,"payload":{"family":"DECOMP","qid":"DECOMP:00283"},"reason":"cell-indeterminate","round":86,"ts":"2026-10-04T02:29:08Z"}
+{"idx":47,"payload":{"qid":"ECHO:00684","why":"endpoint not in matrix: Silhouette Form/dawn-chorus"},"reason":"gate-refused","round":86,"ts":"2026-10-04T02:29:08Z"}
+{"idx":48,"payload":{"a":"Static Electricity Attracts Dust","b":"quilt","fits":0.18},"reason":"moth-drift-rejected","round":88,"ts":"2026-10-04T02:29:21Z"}
+{"idx":49,"payload":{"qid":"GUARD:00621","why":"guard target missing"},"reason":"gate-refused","round":89,"ts":"2026-10-04T02:29:21Z"}
+{"idx":50,"payload":{"family":"TMSEQ","qid":"TMSEQ:00490"},"reason":"cell-indeterminate","round":89,"ts":"2026-10-04T02:29:23Z"}
+{"idx":51,"payload":{"distinct":0.46,"essential":0.1,"parent":"jam","sub":"Fractal harmony"},"reason":"decomp-rejected","round":91,"ts":"2026-10-04T02:29:26Z"}
+{"idx":52,"payload":{"qid":"REL-BOND:00105","why":"endpoint not in matrix: Quantum Fluctuation/ledger"},"reason":"gate-refused","round":94,"ts":"2026-10-04T02:30:18Z"}
+{"idx":53,"payload":{"distinct":0.48,"essential":0.78,"parent":"knot","sub":"Interconnectedness"},"reason":"decomp-rejected","round":94,"ts":"2026-10-04T02:30:19Z"}
+{"idx":54,"payload":{"qid":"SOUND:00486","why":"endpoint not in matrix: Quantum Fluctuation/field"},"reason":"gate-refused","round":97,"ts":"2026-10-04T02:30:33Z"}
+{"idx":55,"payload":{"a":"entropy","b":"static","bridges":0.23,"c":"entropizes static"},"reason":"bridge-rejected","round":98,"ts":"2026-10-04T02:30:36Z"}
+{"idx":56,"payload":{"family":"DECOMP","qid":"DECOMP:00269"},"reason":"cell-indeterminate","round":99,"ts":"2026-10-04T02:30:37Z"}
+{"idx":57,"payload":{"qid":"TENSION:00374","why":"endpoint not in matrix: Quantum Fluctuation/walker"},"reason":"gate-refused","round":100,"ts":"2026-10-04T02:30:38Z"}
+{"idx":58,"payload":{"family":"TMSEQ","qid":"TMSEQ:00468"},"reason":"cell-indeterminate","round":101,"ts":"2026-10-04T02:31:57Z"}
+{"idx":59,"payload":{"a":"field","b":"velvet","bridges":0.12,"c":"Field Theory echoes Velvet Rugs"},"reason":"bridge-rejected","round":102,"ts":"2026-10-04T02:31:58Z"}
+{"idx":60,"payload":{"qid":"REL-BOND:00147","why":"endpoint not in matrix: Quilting stitches on a dying fabric/arrow"},"reason":"gate-refused","round":102,"ts":"2026-10-04T02:31:58Z"}
+{"idx":61,"payload":{"distinct":0.58,"essential":0.28,"parent":"wire","sub":"Resonance Harmonics"},"reason":"decomp-rejected","round":103,"ts":"2026-10-04T02:32:00Z"}
+{"idx":62,"payload":{"qid":"ECHO:00710","why":"endpoint not in matrix: resonates(architect)/thread"},"reason":"gate-refused","round":103,"ts":"2026-10-04T02:32:00Z"}
+{"idx":63,"payload":{"qid":"TENSION:00382","why":"endpoint not in matrix: Rewinding tension/jam"},"reason":"gate-refused","round":104,"ts":"2026-10-04T02:32:00Z"}
+{"idx":64,"payload":{"a":"testimonial value","b":"joy","fits":0.25},"reason":"moth-drift-rejected","round":105,"ts":"2026-10-04T02:32:12Z"}

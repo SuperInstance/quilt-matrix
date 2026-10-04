@@ -43,7 +43,8 @@ def _call(method: str, path: str, body: dict | None = None, timeout_s: float = 2
         API + path, method=method,
         data=json.dumps(body).encode() if body is not None else None,
         headers={"Authorization": f"Bearer {_key()}", "Content-Type": "application/json",
-                 "Accept": "application/json"})  # the magic header, scout-verified
+                 "Accept": "application/json",  # content negotiation (scout-verified)
+                 "User-Agent": "quilt-matrix/1.0"})  # python-urllib UA is WAF-blocked (1010)
     with urllib.request.urlopen(req, timeout=timeout_s) as resp:
         return json.loads(resp.read().decode())
 
@@ -80,25 +81,23 @@ def run_job(engine: str, params: dict, timeout_s: float = 90.0, poll_s: float = 
 
 
 def quantum_bytes(n_bytes: int = 8) -> str | None:
-    """True quantum hex string for the Die Engine seed. None on any failure —
-    callers fall back to the deterministic sha seed and receipt it."""
+    """Certified quantum hex for the Die Engine seed (comet-qrng-v1: Born-rule
+    measurements, SP 800-90B min-entropy certificate, Toeplitz extractor,
+    CHSH Bell witness). None on any failure — callers fall back to the
+    deterministic sha seed and receipt it. NOTE: python-urllib UA must be
+    set (see _call) or the WAF answers 403; coin-toss-v1 returns aggregate
+    counts only — comet streams real bits."""
     try:
-        r = run_job("coin-toss-v1", {"mode": "emu", "shots": max(8, n_bytes * 8)},
-                    timeout_s=45.0)
+        r = run_job("comet-qrng-v1", {"mode": "emu"}, timeout_s=75.0)
         if not r["ok"]:
             return None
-        res = r["result"]
-        # result shape varies: bits string / list of bits / hex — normalize
-        if isinstance(res, dict):
-            bits = res.get("bits") or res.get("result") or res.get("random") or ""
-            if isinstance(bits, list):
-                bits = "".join(str(int(bool(b))) for b in bits)[: n_bytes * 8]
-        else:
-            bits = str(res)
-        bits = "".join(c for c in bits if c in "01")
-        if len(bits) < n_bytes * 8:
+        out = (r.get("result") or {}).get("output") or {}
+        rnd = out.get("random") or {}
+        hx = rnd.get("hex") or ""
+        hx = "".join(c for c in str(hx) if c in "0123456789abcdef")
+        if len(hx) < n_bytes * 2:
             return None
-        return f"{int(bits[: n_bytes * 8], 2):0{n_bytes * 2}x}"
+        return hx[: n_bytes * 2]
     except Exception:
         return None
 

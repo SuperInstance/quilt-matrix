@@ -17,10 +17,13 @@ drift,drift,0.56,0.49,0.5,0,seed,lexicon seed row
 drum,drum,0.56,0.51,0.5,0,seed,lexicon seed row
 dusk,dusk,0.56,0.48,0.5,0,seed,lexicon seed row
 echo,echo,0.58,0.45,0.5,0,seed,lexicon seed row
+echoes,echoes,0.5,0.5,0.5,93,cell+oracle,tminus stage of echo
 echoes-apparition,echoes(apparition),0.5,0.5,0.5,34,cell+oracle,tminus stage of mirror
 echoes-of-lost-moments-rewind,Echoes of lost moments rewind,0.52,0.5,0.545,66,cell+oracle,bridge mirror<->rewind
+echoes-seeker,echoes(seeker),0.5,0.5,0.5,106,cell+oracle,tminus stage of oracle
 ember,ember,0.52,0.49,0.5,0,seed,lexicon seed row
 entropy,entropy,0.52,0.46,0.5,0,seed,lexicon seed row
+ephemeral-blooms-echo-forgotten-melodies,Ephemeral blooms echo forgotten melodies,0.61,0.5,0.475,90,cell+oracle,bridge bloom<->song
 eyewitness-account,Eyewitness account,0.7040000000000001,0.5,0.76,15,cell+oracle,decomp of witness
 field,field,0.56,0.47000000000000003,0.5,0,seed,lexicon seed row
 field-theory,Field Theory,0.6080000000000001,0.5,0.52,0,weave:runs/night2,decomp of field
@@ -49,12 +52,16 @@ plainsong,plainsong,0.58,0.46,0.5,0,seed,lexicon seed row
 prep,prep,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of loop
 quantum-fluctuation,Quantum Fluctuation,0.5,0.5,0.5,14,cell+oracle,tminus stage of value
 quilt,quilt,0.58,0.49,0.5,0,seed,lexicon seed row
+quilting-stitches-on-a-dying-fabric,Quilting stitches on a dying fabric,0.51,0.5,0.3925,93,cell+oracle,bridge quilt<->die
 random-pattern,Random Pattern,0.5,0.5,0.5,14,cell+oracle,tminus stage of value
 receipt,receipt,0.5,0.48,0.5,0,seed,lexicon seed row
 resonance,resonance,0.54,0.51,0.5,0,seed,lexicon seed row
 resonant-frequency,Resonant frequency,0.776,0.5,0.94,72,cell+oracle,decomp of resonance
+resonates,resonates,0.5,0.5,0.5,93,cell+oracle,tminus stage of echo
 resonates-accelerator,resonates(accelerator),0.5,0.5,0.5,65,cell+oracle,tminus stage of value
 resonates-architect,resonates(architect),0.5,0.5,0.5,65,cell+oracle,tminus stage of value
+resonates-dream,resonates(dream),0.5,0.5,0.5,106,cell+oracle,tminus stage of oracle
+resonates-tide,resonates(tide),0.5,0.5,0.5,84,cell+oracle,tminus stage of quilt
 resonates-witness,resonates(witness),0.5,0.5,0.5,34,cell+oracle,tminus stage of mirror
 rewind,rewind,0.52,0.49,0.5,0,seed,lexicon seed row
 rewinding-tension,Rewinding tension,0.52,0.5,0.475,51,cell+oracle,bridge rewind<->tension
