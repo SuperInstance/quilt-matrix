@@ -35,3 +35,5 @@
 {"idx":34,"payload":{"qid":"GUARD:00572","why":"guard target missing"},"reason":"gate-refused","round":76,"ts":"2026-10-04T03:37:01Z"}
 {"idx":35,"payload":{"distinct":0.18,"essential":0.04,"parent":"velvet","sub":"Velvet's texture relates to neurons' ele"},"reason":"decomp-rejected","round":77,"ts":"2026-10-04T03:37:03Z"}
 {"idx":36,"payload":{"a":"dawn-chorus","b":"spark","fits":0.2},"reason":"moth-drift-rejected","round":80,"ts":"2026-10-04T03:37:17Z"}
+{"idx":37,"payload":{"family":"DECOMP","qid":"DECOMP:00274"},"reason":"cell-indeterminate","round":94,"ts":"2026-10-04T03:39:06Z"}
+{"idx":38,"payload":{"qid":"TENSION:00392","why":"endpoint not in matrix: loop/t-minus 3"},"reason":"gate-refused","round":95,"ts":"2026-10-04T03:39:06Z"}
