@@ -124,3 +124,16 @@ Validation: `scripts/music_wave2.py` re-parses every file with a minimal SMF
 reader (MThd header + division 480, MTrk event walk incl. running status,
 End-of-Track required, no trailing bytes) and asserts all four parse before
 reporting note counts and durations.
+
+## The quantum arrangement (engine.moth.qrc_midi, first night live)
+
+`music/jev_path_qrc_triple.mid` — the triple web's own chain-of-thought
+(96 path nodes from night1's 118 JEV walks over the woven night1+night2+night3
+webs), pentatonic-mapped like `jev_melody`, uploaded through the moth assets
+flow, learned by the qrc-midi-v1 quantum reservoir (training_loss 2.56 → 1.47
+→ 1.16 — it genuinely learned), and returned as a fresh arrangement. The
+learned model itself is kept as an artifact: `runs/night1/qrc-model-triple.json`
+(vocabulary, readout_weights, internal_state). Receipt `qrc-midi` in the
+night1 ledger carries the full job provenance (asset id, job id, latency).
+The 123-byte result is small; the CONTRACT it proves is not — see
+docs/MOTH-PROBE.md for the 97-receipted-request journey to this closed loop.

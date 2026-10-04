@@ -73,3 +73,6 @@
 {"idx":72,"payload":{"qid":"REL-BOND:00024","why":"endpoint not in matrix: Silhouette Form/slackwater"},"reason":"gate-refused","round":113,"ts":"2026-10-04T03:43:16Z"}
 {"idx":73,"payload":{"distinct":0.38,"essential":0.07,"parent":"knot","sub":"Joy echoes entropy"},"reason":"decomp-rejected","round":114,"ts":"2026-10-04T03:43:18Z"}
 {"idx":74,"payload":{"qid":"ECHO:00696","why":"endpoint not in matrix: Harmonic overlap/Mitosis"},"reason":"gate-refused","round":114,"ts":"2026-10-04T03:43:18Z"}
+{"idx":75,"payload":{"qid":"PLAY:00781","why":"endpoint not in matrix: field/Darkness as absence of light"},"reason":"gate-refused","round":115,"ts":"2026-10-04T03:43:20Z"}
+{"idx":76,"payload":{"a":"receipt","b":"quilt","fits":0.27},"reason":"moth-drift-rejected","round":116,"ts":"2026-10-04T03:43:33Z"}
+{"idx":77,"payload":{"qid":"BRIDGE:00363","why":"bridge endpoints missing"},"reason":"gate-refused","round":118,"ts":"2026-10-04T03:43:35Z"}

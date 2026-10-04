@@ -93,6 +93,7 @@ spark,spark,0.5,0.48,0.5,0,seed,lexicon seed row
 static,static,0.56,0.51,0.5,0,seed,lexicon seed row
 static-electricity-attracts-dust,Static Electricity Attracts Dust,0.6120000000000001,0.5,0.53,25,cell+oracle,decomp of static
 structural-integrity,Structural Integrity,0.784,0.5,0.96,0,weave:runs/night3,decomp of bridge
+sundering,sundering,0.5,0.5,0.5,117,cell+oracle,tminus stage of tension
 surface,surface,0.58,0.47000000000000003,0.5,0,seed,lexicon seed row
 t-0,t-0,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of lattice
 t-1,t-1,0.5,0.5,0.5,0,weave:runs/night2,tminus stage of lattice
