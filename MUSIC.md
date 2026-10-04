@@ -50,3 +50,77 @@ curve; 20 (double_or_bust) everything at once.
 No hand-picked notes anywhere: every byte of every file traces to a receipt
 in `receipts.jsonl` / `scars.jsonl` / `leaderboard.csv` via the mappings
 above. The composer is the run.
+
+## Wave 2 forms (Task 71-b)
+
+Four stricter shapes, composed from the existing night1/night2 ledgers by
+`scripts/music_wave2.py` (engine's `MidiWriter` and pitch math reused; runs/
+untouched). Same law as wave 1: rewind the run, the music comes back.
+
+**`music/scar_counterpoint.mid`** — 65 night1 scars against 19 night2 scars,
+first-species counterpoint. Cantus firmus (ch0, phrygian on E3): one whole
+note per night1 scar in round order; pitch degree = round(entropy×13.99),
+where a scar's receipted entropy is the mean of its own payload floats
+(`distinct`/`essential`/`bridges`/`repairable`/`suspicious`/`fits`) — the 27
+float-less scars (cell-indeterminate: payload is only `family`/`qid` or
+`qid`/`why`) take the web's disorder `1−balance` at their round from
+`leaderboard.csv` — which is why the CF keeps returning to its reciting
+tone: indeterminate scars pin the line to the final. Counterpoint (ch1):
+night2's 19 scars cycled against them (index i mod 19, i.e. scar round
+numbers matched modulo the other voice's count); the vertical interval is
+chosen by `(round_n1 + round_n2) mod 4` → 3rd/5th/6th/8ve, forced into
+contrary motion against the CF (range-clamp falls back to the flipped
+interval), with parallel perfects avoided by advancing the consonance slot.
+It fits the story because scars are the ledger's stubborn dissonances — yet
+paired with the second night's failures they lock into consonance: two runs'
+rejections resolve against each other, 65 bars at 100bpm (~156s), 130 notes.
+
+**`music/ledger_canon.mid`** — strict real canon at the fifth over the raw
+receipt stream. Leader (ch0, D dorian): night1 `receipts.jsonl` lines 1–32
+(all receipt types: oracle/mutation/cell/jev/run-end/oracle-fail), the first
+hex byte of each line's hash-chained `hash` → degree `byte mod 7`, one
+quarter-note each. Follower (ch1): the identical 32 hashes transposed
+exactly +7 semitones (D dorian → A dorian, asserted in code), entering 8
+sixteenths late — the ledger imitating itself, verbatim, at the dominant.
+Free bass (ch2): night2's first 32 receipts, same hash→degree treatment, as
+running eighths two octaves down. A hash-chained ledger is already a canon
+(each line repeats its predecessor in disguised form); this just lets you
+hear it — 96 notes, ~23s at 88bpm.
+
+**`music/jev_tension_fugue.mid`** — three-voice fugue over the JEV walker
+ledger (`leaderboard.csv` carries no JEV columns, so the 106 `jev` receipts
+are the score; node weights read from `matrix/nodes.csv`, 99 rows). Step =
+one eighth-note per walker receipt. Subject (ch0): the walker's node `joy`
+per position, degree = round(joy×13.99), D4. Answer (ch1): the `value`
+column inverted (1−value) at the dominant A4, entering at position 16.
+Countersubject (ch2): the `entropy` column on D3, entering at position 32.
+Episodes fire on receipted degree-zero moments — the walker standing on a
+graph-degree-zero node of `edges.csv` (the web's only one, `loop`,
+origin_round 0, visited once at position 15) or a walk that never leaves its
+start node (26 single-node walks) → 26 episode steps where the subject plays
+its melodic inversion about the modal fifth (degree → 16−degree). Tension is
+the fugue's native form — a subject stated, answered, and woven against
+itself is exactly what the JEV web does to joy/value/entropy — 270 notes,
+~31s at 104bpm.
+
+**`music/rewind_palinode.mid`** — the palinode: the song that un-composes
+itself. Forward pass: night1 rounds 8→40 (33 bars) as wave-1 `round_chords`
+— root = sha256 of the round's final `matrix_hash`, mode from the round's
+receipted relation (`rel`) → `REL_TO_MODE`, else `sound.csv` mode telemetry,
+else the dominant mutation verb (delta→dorian, confirmed→major, fun→lydian,
+brightness→mixolydian, bridges→pentatonic, fits→phrygian), voicing from the
+round's payload floats, duration from its entropy (mutation `entropy`, else
+1−balance). Hinge: the round-40 rewind receipt itself (ledger idx 265,
+`scars_preserved: 22, to_round: 40`) — root from its `matrix_hash`, voiced
+by 22/40, plus one raw channel-10 accent: the fold, audible. Retrograde:
+rounds 40→8, each chord's voicing reversed (`vals[::-1]`) — the same
+receipted pitches un-playing in reverse order. On top, the scar-hit
+percussion (night1 scars, rounds 8–40: 15 hits per pass, 30 total) is NOT
+retrograded: it re-sounds at each pass's bar position in forward round
+order, because scars are sticky — rewind the run and the music un-writes
+itself, but the failures keep beating. 164 notes, ~143s at 112bpm.
+
+Validation: `scripts/music_wave2.py` re-parses every file with a minimal SMF
+reader (MThd header + division 480, MTrk event walk incl. running status,
+End-of-Track required, no trailing bytes) and asserts all four parse before
+reporting note counts and durations.
