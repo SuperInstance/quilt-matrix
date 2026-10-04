@@ -2,3 +2,4 @@
 {"idx":1,"payload":{"a":"receipt","b":"value","fits":0.23},"reason":"moth-drift-rejected","round":3,"ts":"2026-10-04T03:25:54Z"}
 {"idx":2,"payload":{"a":"ledger","b":"slackwater","bridges":0.34,"c":"Transom"},"reason":"bridge-rejected","round":6,"ts":"2026-10-04T03:25:58Z"}
 {"idx":3,"payload":{"distinct":0.31,"essential":0.92,"parent":"song","sub":"Rhythm and Melody"},"reason":"decomp-rejected","round":7,"ts":"2026-10-04T03:26:00Z"}
+{"idx":4,"payload":{"distinct":0.28,"essential":0.82,"parent":"velvet","sub":"Luxurious fabric texture"},"reason":"decomp-rejected","round":13,"ts":"2026-10-04T03:26:21Z"}

@@ -1,5 +1,6 @@
 id,label,joy,entropy,value,origin_round,created_by,note
 arrow,arrow,0.54,0.45,0.5,0,seed,lexicon seed row
+birds-morning-songs-are-like-dawn-s-ech,Birds' morning songs are like dawn's ech,0.59,0.5,0.6625,12,cell+oracle,bridge dawn<->dawn-chorus
 blank-space,Blank Space,0.5,0.5,0.5,5,cell+oracle,tminus stage of song
 bloom,bloom,0.54,0.48,0.5,0,seed,lexicon seed row
 bouncer,bouncer,0.54,0.49,0.5,0,seed,lexicon seed row
@@ -41,6 +42,8 @@ spark,spark,0.5,0.48,0.5,0,seed,lexicon seed row
 static,static,0.56,0.51,0.5,0,seed,lexicon seed row
 surface,surface,0.58,0.47000000000000003,0.5,0,seed,lexicon seed row
 t-minus,t-minus,0.58,0.5,0.5,0,seed,lexicon seed row
+t-minus-2,t-minus 2,0.5,0.5,0.5,11,cell+oracle,tminus stage of wave
+t-minus-3,t-minus 3,0.5,0.5,0.5,11,cell+oracle,tminus stage of wave
 tension,tension,0.52,0.5,0.5,0,seed,lexicon seed row
 thread,thread,0.58,0.49,0.5,0,seed,lexicon seed row
 tide,tide,0.5,0.45,0.5,0,seed,lexicon seed row
